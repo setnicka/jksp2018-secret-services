@@ -1,0 +1,7 @@
+package: github.com/setnicka/jksp2018-secret-services
+import:
+- package: github.com/coreos/go-log
+  subpackages:
+  - log
+- package: github.com/gorilla/sessions
+  version: ^1.1.0
