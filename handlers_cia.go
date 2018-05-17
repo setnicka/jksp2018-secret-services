@@ -24,7 +24,7 @@ func ciaIndexHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	//a3.f.G3.H3.
+	// e.F.g.H.i.J
 
 	if r.Method == http.MethodPost {
 		if err := r.ParseForm(); err != nil {

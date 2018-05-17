@@ -38,8 +38,6 @@ abbr[title] {
   padding: 1em;
   padding-top: .3em;
   max-width: 40em;
-  background: rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 25%;
   left: 0;
@@ -63,7 +61,7 @@ h2 {
   margin-bottom: 1em; }
 
 form {
-  margin: 1em 0 0 0; }
+  margin: 1em auto 0 auto; }
   form label {
     display: inline-block;
     min-width: 7em; }
@@ -77,3 +75,11 @@ form {
   border-color: #800; }
   .alert-danger button {
     display: none; }
+
+#granted {
+  margin-top: 1em;
+  text-align: center;
+  display: block;
+  font-size: 400%;
+  font-variant: small-caps;
+  color: #5F5; }
