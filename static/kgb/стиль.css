@@ -45,3 +45,11 @@ form {
     border: 3px black outset; }
   form input {
     border: 2px black inset; }
+
+#поволено {
+  margin-top: 1em;
+  text-align: center;
+  display: block;
+  font-size: 400%;
+  font-variant: small-caps;
+  color: #0F3; }
