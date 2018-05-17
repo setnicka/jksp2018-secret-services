@@ -66,7 +66,7 @@ func main() {
 func newRouter(name string) *mux.Router {
 	router := mux.NewRouter()
 	router.HandleFunc("/start-hry", loginHandler)
-	fs := NoListFileSystem{http.Dir(STATIC_DIR)}
+	fs := NoListFileSystem{http.Dir(STATIC_DIR + "/" + name)}
 	router.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(fs)))
 	return router
 }
