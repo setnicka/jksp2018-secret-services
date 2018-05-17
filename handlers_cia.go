@@ -17,7 +17,7 @@ func ciaIndexHandler(w http.ResponseWriter, r *http.Request) {
 	defer func() { executeTemplate(w, "ciaIndex", data) }()
 
 	team := server.state.GetTeam(getUser(r))
-	if team.CIA.Completed {
+	if team != nil && team.CIA.Completed {
 		http.Redirect(w, r, "/internal", http.StatusSeeOther)
 		return
 	}
@@ -108,7 +108,7 @@ func ciaInternalHandler(w http.ResponseWriter, r *http.Request) {
 	defer func() { executeTemplate(w, "ciaInternal", data) }()
 
 	team := server.state.GetTeam(getUser(r))
-	if !team.CIA.Completed {
+	if team == nil || !team.CIA.Completed {
 		http.Redirect(w, r, "/", http.StatusSeeOther)
 		return
 	}

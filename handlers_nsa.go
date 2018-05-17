@@ -1,14 +1,27 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
 )
 
 func nsaIndexHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "INDEX - Hello, %q", r.URL.Path[1:])
+	data := getGeneralData("NSA", r)
+	defer func() { executeTemplate(w, "nsaIndex", data) }()
+
+	team := server.state.GetTeam(getUser(r))
+	if team != nil && team.NSA.Completed {
+		http.Redirect(w, r, "/", http.StatusSeeOther)
+		return
+	}
 }
 
-func nsaOtherHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "OTHER - Hello, %q", r.URL.Path[1:])
+func nsaInternalHandler(w http.ResponseWriter, r *http.Request) {
+	data := getGeneralData("NSA", r)
+	defer func() { executeTemplate(w, "nsaInternal", data) }()
+
+	team := server.state.GetTeam(getUser(r))
+	if team == nil || !team.NSA.Completed {
+		http.Redirect(w, r, "/", http.StatusSeeOther)
+		return
+	}
 }

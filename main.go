@@ -51,7 +51,7 @@ func (subdomains Subdomains) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 func main() {
 	cookieStore := sessions.NewCookieStore([]byte(SESSION_SECRET))
 	cookieStore.MaxAge(SESSION_MAX_AGE)
-	cookieStore.Options.Domain = ".fuf.me"
+	//cookieStore.Options.Domain = ".fuf.me"
 
 	server = &Server{
 		sessionStore: cookieStore,
@@ -89,8 +89,28 @@ func (s *Server) Start() {
 
 	nsaRouter := newRouter("nsa")
 	nsaRouter.HandleFunc("/", auth(nsaIndexHandler))
-	nsaRouter.HandleFunc("/other", auth(nsaOtherHandler))
+	nsaRouter.HandleFunc("/intranet", auth(nsaInternalHandler))
 	subdomains["nsa"] = nsaRouter
+
+	kgbRouter := newRouter("kgb")
+	kgbRouter.HandleFunc("/", auth(kgbIndexHandler))
+	kgbRouter.HandleFunc("/intranet", auth(kgbInternalHandler))
+	subdomains["kgb"] = kgbRouter
+
+	fbiRouter := newRouter("fbi")
+	fbiRouter.HandleFunc("/", auth(fbiIndexHandler))
+	fbiRouter.HandleFunc("/intranet", auth(fbiInternalHandler))
+	subdomains["fbi"] = fbiRouter
+
+	pplRouter := newRouter("ppl")
+	pplRouter.HandleFunc("/", auth(pplIndexHandler))
+	pplRouter.HandleFunc("/intranet", auth(pplInternalHandler))
+	subdomains["ppl"] = pplRouter
+
+	bisRouter := newRouter("bis")
+	bisRouter.HandleFunc("/", auth(bisIndexHandler))
+	bisRouter.HandleFunc("/intranet", auth(bisInternalHandler))
+	subdomains["bis"] = bisRouter
 
 	server.getTemplates()
 	log.Info("Server started")
