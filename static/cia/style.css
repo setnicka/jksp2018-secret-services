@@ -1,0 +1,79 @@
+html, body {
+  min-height: 100%; }
+
+body {
+  background: black url("/static/background.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-attachment: fixed;
+  color: #EEE;
+  font: 18pt Helvetica, Arial;
+  line-height: 1.25; }
+  @media (max-width: 800px) {
+    body {
+      font-size: 14pt; } }
+
+input[type="submit"] {
+  font-size: 18pt; }
+
+input {
+  background: black;
+  border: 2px solid white;
+  border-radius: 2px;
+  padding: 0.2em 0.3em; }
+
+abbr[title] {
+  border: 0; }
+
+#logo {
+  width: 30%;
+  max-width: 15em;
+  display: block;
+  margin: 0 auto; }
+
+#content {
+  margin: auto;
+  margin-top: 10%;
+  padding: 1em;
+  padding-top: .3em;
+  max-width: 40em;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 25%;
+  left: 0;
+  right: 0; }
+
+/*h1 { font-size: 300% }
+h2 { font-size: 250% }
+h3 { font-size: 200% } */
+h1, h2, h3, h4, h5, h6 {
+  margin: .3em 0;
+  font-weight: bold; }
+
+h1 {
+  font-variant: small-caps;
+  margin-top: 0; }
+
+h1, h2 {
+  text-align: center; }
+
+h2 {
+  margin-bottom: 1em; }
+
+form {
+  margin: 1em 0 0 0; }
+  form label {
+    display: inline-block;
+    min-width: 7em; }
+  form button {
+    display: inline-block;
+    margin-top: 0.5em; }
+
+.alert-danger {
+  background: black;
+  color: #800;
+  border-color: #800; }
+  .alert-danger button {
+    display: none; }

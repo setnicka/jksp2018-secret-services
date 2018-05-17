@@ -1,14 +1,16 @@
 {{ define "ciaIndex" }}
 {{ template "part_header" . }}
+{{ template "ciaHeader" . }}
+    <h2>Remote Administration</h2>
 
-<h1>CIA</h1>
+	{{ template "part_messageBox" . }}
+    To login, use your <abbr title="Special Intelligence Service">SIS</abbr> credentials.
 
-{{ template "part_messageBox" . }}
-
-  <form method="post">
-    <input type="text" name="login" placeholder="Secret login">
-    <input type="password" name="password" placeholder="Secret password">
-    <input type="submit" value="Login">
-  </form>
+    <form method="post" id="form">
+      <input type="text" name="login" placeholder="Secret login">
+      <input type="password" name="password" placeholder="Secret password">
+      <input type="submit" value="Login">
+    </form>
+  </div>
 </body>
 {{ end }}
