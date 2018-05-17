@@ -18,7 +18,7 @@ func kgbIndexHandler(w http.ResponseWriter, r *http.Request) {
 
 	team := server.state.GetTeam(getUser(r))
 	if team != nil && team.KGB.Completed {
-		http.Redirect(w, r, "/", http.StatusSeeOther)
+		http.Redirect(w, r, "/интранет", http.StatusSeeOther)
 		return
 	}
 

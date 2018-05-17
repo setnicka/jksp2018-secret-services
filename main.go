@@ -96,7 +96,7 @@ func (s *Server) Start() {
 
 	kgbRouter := newRouter("kgb")
 	kgbRouter.HandleFunc("/", auth(kgbIndexHandler))
-	kgbRouter.HandleFunc("/intranet", auth(kgbInternalHandler))
+	kgbRouter.HandleFunc("/интранет", auth(kgbInternalHandler))
 	subdomains["kgb"] = kgbRouter
 
 	fbiRouter := newRouter("fbi")
