@@ -27,7 +27,10 @@ type Result struct {
 	Tries         int
 }
 
-type ResultCIA Result
+type ResultCIA struct {
+	Result
+	LastTry time.Time
+}
 type ResultNSA Result
 type ResultKGB Result
 type ResultFBI Result

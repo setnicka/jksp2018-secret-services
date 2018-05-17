@@ -4,12 +4,14 @@ import (
 	"net/http"
 	"regexp"
 	"time"
+	"unicode"
 
 	"github.com/coreos/go-log/log"
 )
 
 const (
-	CIA_LOGIN = "agentfred"
+	CIA_LOGIN  = "agentfred"
+	TIME_LIMIT = time.Second * 60
 )
 
 func ciaIndexHandler(w http.ResponseWriter, r *http.Request) {
@@ -22,7 +24,7 @@ func ciaIndexHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	//a3a.B3B3...
+	//a3.f.G3.H3.
 
 	if r.Method == http.MethodPost {
 		if err := r.ParseForm(); err != nil {
@@ -31,8 +33,14 @@ func ciaIndexHandler(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
+		if time.Since(team.CIA.LastTry) < TIME_LIMIT {
+			data.MessageType = "danger"
+			data.Message = "Minimal time between two login attempts is 60 second"
+			return
+		}
 		defer server.state.Save()
 		team.CIA.Tries++
+		team.CIA.LastTry = time.Now()
 
 		login := r.PostFormValue("login")
 		password := r.PostFormValue("password")
@@ -90,6 +98,57 @@ func ciaIndexHandler(w http.ResponseWriter, r *http.Request) {
 		if other < numbers {
 			data.MessageType = "danger"
 			data.Message = "Incorrect password, there is to much numbers"
+			return
+		}
+
+		// pismena nesmi byt stejna
+		wasLetter := map[rune]bool{}
+		for _, r := range password {
+			if unicode.IsLetter(r) {
+				if _, found := wasLetter[r]; found {
+					data.MessageType = "danger"
+					data.Message = "Incorrect password, there cannot be two same letters"
+					return
+				}
+				wasLetter[r] = true
+			}
+		}
+
+		// pismena nejsou v abecednim poradi
+		lastLetter := 'a'
+		for _, r := range password {
+			if unicode.IsLetter(r) {
+				r = unicode.ToLower(r)
+				if r < lastLetter {
+					data.MessageType = "danger"
+					data.Message = "Incorrect password, letters must be in alphabet order"
+					return
+				}
+				lastLetter = r
+			}
+		}
+
+		// na tretim miste neni f
+		if password[2] != 'f' {
+			data.MessageType = "danger"
+			data.Message = "Incorrect password, there isn't first letter of your first name on the third position in the password"
+			return
+		}
+
+		reAroundNumber := regexp.MustCompile("[a-zA-Z][0-9][a-zA-Z]")
+		reAroundNumberSpecial := regexp.MustCompile("[^0-9a-zA-Z][0-9][^0-9a-zA-Z]")
+
+		// cislo nesmi mit z obou stran specialni znak
+		if reAroundNumberSpecial.Match(bpassword) {
+			data.MessageType = "danger"
+			data.Message = "Incorrect password, number cannot be surrounded by special characters from both sides"
+			return
+		}
+
+		// cislo nesmi mit z obou stran pismeno
+		if reAroundNumber.Match(bpassword) {
+			data.MessageType = "danger"
+			data.Message = "Incorrect password, number cannot be surrounded by letters from both sides"
 			return
 		}
 
