@@ -1,0 +1,22 @@
+{{ define "orgDashboard" }}
+{{ template "part_header" . }}
+<h1>Dashboard</h1>
+
+{{ template "part_messageBox" . }}
+
+<table class="table table-bordered table-striped">
+<thead>
+	<tr><th>Tým</th>{{range .SecretServices}}<th>{{.}}</th>{{end}}</tr>
+</thead>
+<tbody>
+	{{range .Teams}}
+	<tr>
+		<th>{{.Name}}</th>
+		{{range .Results}}
+			<td class="{{if .Completed}}success{{else if gt .Tries 0}}warning{{end}}">{{if .Completed}}{{.CompletedTime}}{{end}}<br>Pokusů: {{.Tries}}</td>
+		{{end}}
+	</tr>
+	{{end}}
+</tbody>
+</table>
+{{ end }}

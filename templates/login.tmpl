@@ -1,0 +1,11 @@
+{{ define "login" }}
+{{ template "part_header" . }}
+{{ template "part_messageBox" . }}
+
+  <form method="post">
+    <input type="text" name="login" placeholder="Login">
+    <input type="password" name="password" placeholder="Heslo">
+    <input type="submit" value="Do hry">
+  </form>
+</body>
+{{ end }}
