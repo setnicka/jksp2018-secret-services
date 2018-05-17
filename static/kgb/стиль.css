@@ -1,0 +1,47 @@
+@charset "UTF-8";
+body {
+  background: url("tile.gif");
+  color: yellow;
+  font: 18pt Times;
+  line-height: 1.25; }
+
+button {
+  font-size: 18pt; }
+
+aside {
+  border: 3px #000 ridge;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 10em;
+  background: #D00; }
+
+#лого {
+  width: 90%;
+  border: 3px black outset; }
+
+#содержание {
+  margin-left: 10em; }
+
+/*h1 { font-size: 300% }
+h2 { font-size: 250% }
+h3 { font-size: 200% } */
+@media (max-width: 800px) {
+  body {
+    font-size: 14pt; } }
+h1, h2, h3, h4, h5, h6 {
+  margin: .3em 0;
+  font-weight: bold; }
+
+h2 {
+  margin-bottom: 1em; }
+
+form {
+  margin: 1em 0 0 0; }
+  form button {
+    display: inline-block;
+    margin-top: .5em;
+    border: 3px black outset; }
+  form input {
+    border: 2px black inset; }
