@@ -1,0 +1,14 @@
+{{ define "bisIndex" }}
+{{ template "part_header" . }}
+
+<h1>BIS</h1>
+
+{{ template "part_messageBox" . }}
+
+  <form method="post">
+    <input type="text" name="login" placeholder="Secret login">
+    <input type="password" name="password" placeholder="Secret password">
+    <input type="submit" value="Login">
+  </form>
+</body>
+{{ end }}
