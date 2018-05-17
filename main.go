@@ -67,7 +67,9 @@ func newRouter(name string) *mux.Router {
 	router := mux.NewRouter()
 	router.HandleFunc("/start-hry", loginHandler)
 	fs := NoListFileSystem{http.Dir(STATIC_DIR + "/" + name)}
+	global_fs := NoListFileSystem{http.Dir(STATIC_DIR + "/global/" + name)}
 	router.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(fs)))
+	router.PathPrefix("/favicon.ico").Handler(http.StripPrefix("", http.FileServer(global_fs)))
 	return router
 }
 

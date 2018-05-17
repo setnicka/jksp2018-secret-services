@@ -76,13 +76,13 @@ func ciaIndexHandler(w http.ResponseWriter, r *http.Request) {
 
 		if letters < 3 {
 			data.MessageType = "danger"
-			data.Message = "Incorrect password, there is not enough letters"
+			data.Message = "Incorrect password, there isn't enough letters"
 			return
 		}
 
 		if other < 3 {
 			data.MessageType = "danger"
-			data.Message = "Incorrect password, there is to much letters and numbers"
+			data.Message = "Incorrect password, there are too much letters and numbers"
 			return
 		}
 		if doubleLetters > 0 {
@@ -92,12 +92,12 @@ func ciaIndexHandler(w http.ResponseWriter, r *http.Request) {
 		}
 		if smallLetters != bigLetters {
 			data.MessageType = "danger"
-			data.Message = "Incorrect password, number of lowercase letters differ from number of uppercase letters"
+			data.Message = "Incorrect password, the number of lowercase letters differs from number of uppercase letters"
 			return
 		}
 		if other < numbers {
 			data.MessageType = "danger"
-			data.Message = "Incorrect password, there is to much numbers"
+			data.Message = "Incorrect password, there is too much numbers"
 			return
 		}
 
