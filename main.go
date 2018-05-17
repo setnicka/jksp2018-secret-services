@@ -91,7 +91,7 @@ func (s *Server) Start() {
 
 	nsaRouter := newRouter("nsa")
 	nsaRouter.HandleFunc("/", auth(nsaIndexHandler))
-	nsaRouter.HandleFunc("/intranet", auth(nsaInternalHandler))
+	nsaRouter.HandleFunc("/intranet", auth(nsaIntranetHandler))
 	subdomains["nsa"] = nsaRouter
 
 	kgbRouter := newRouter("kgb")
@@ -114,7 +114,11 @@ func (s *Server) Start() {
 	bisRouter.HandleFunc("/intranet", auth(bisInternalHandler))
 	subdomains["bis"] = bisRouter
 
-	server.getTemplates()
+	if _, err := server.getTemplates(); err != nil {
+		log.Errorf("Cannot load templates: %v", err)
+		return
+	}
+
 	log.Info("Server started")
 
 	http.ListenAndServe(":8080", subdomains)

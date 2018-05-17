@@ -1,0 +1,113 @@
+.right-float { float: right; }
+
+body {
+	text-align: center;
+	background-color: #171717;
+	background-attachment: fixed;
+	background-image: url(design/background.jpg);
+	background-position: top center;
+}
+
+h1.main {
+	color: white;
+	text-shadow: 3px 3px 3px black;
+	text-align: center;
+	font-variant: small-caps;
+}
+h1.main small { color: #eeeeee; }
+h1.granted {
+	font-size: 80px;
+	color: #8BFF6F;
+}
+
+table#logo_table {
+	margin: 0px auto;
+}
+table#logo_table img#logo { margin-right: 10px; }
+
+div#messageBox {
+	width: 600px;
+	margin: 0px auto;
+	margin-top: 20px;
+}
+
+div#logon_user {
+	margin: 0px auto;
+	padding: 15px;
+	font-size: 18px;
+	width: 80%;
+	border-radius: 10px;
+	background-image: url(design/transparent2.png);
+	color: white;
+	font-variant: small-caps;
+}
+div#logon_user form {
+	float: right;
+	margin-top: 7px;
+	width: 120px;
+}
+
+form#login_form {
+	margin: 20px auto;
+	width: 300px;
+	color: white;
+	font-variant: small-caps;
+}
+
+div#org_menu {
+	border-radius: 10px;
+	background-image: url(design/transparent2.png);
+	width: 330px;
+	margin: 20px auto;
+	font-variant: small-caps;
+	font-size: 18px;
+	color: white;
+}
+
+div#org_menu ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+div#org_menu li {
+	display: inline;
+	padding: 0px 15px;
+}
+div#org_menu li a {
+	color: white;
+}
+
+div.panel {
+	width: 700px;
+	padding: 0px 20px 20px;
+	margin: 10px auto;
+	backgroud-color: white;
+	border-radius: 10px;
+	box-shadow: 3px 3px 3px black;
+}
+
+
+/* Info windows */
+.window_info,.window_ok,.window_warning,.window_error {
+	border: 1px solid;
+	margin: 5px 0px;
+	padding: 7px;
+	background-repeat: no-repeat;
+	background-position: 5px center;
+}
+.window_info {
+	color: #00529B;
+	background-color: #BDE5F8;
+}
+.window_ok {
+	color: #4F8A10;
+	background-color: #DFF2BF;
+}
+.window_warning {
+	color: #9F6000;
+	background-color: #FEEFB3;
+}
+.window_error {
+	color: #D8000C;
+	background-color: #FFBABA;
+}

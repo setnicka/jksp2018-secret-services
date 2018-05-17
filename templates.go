@@ -43,6 +43,7 @@ func (s *Server) getTemplates() (*template.Template, error) {
 			changed = true
 		}
 	}
+
 	if changed {
 		log.Debug("Parsing all template files because of new/changed template files")
 		s.templates, err = template.ParseGlob(globPath)
