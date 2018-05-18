@@ -1,0 +1,14 @@
+{{ define "mi5Index" }}
+{{ template "mi5Header" . }}
+
+    <form method="post" id="form">
+      <h2>Remote Access</h2>
+      <label for="login">Agent name </label><input type="text" name="login"><br>
+      <label for="password">Passphrase </label><input type="password" name="password"><br>
+	  {{ template "part_messageBox" . }}
+      <input type="submit" value="Login">
+    </form>
+  </div>
+  <footer></footer>
+</body>
+{{ end }}

@@ -114,6 +114,11 @@ func (s *Server) Start() {
 	bisRouter.HandleFunc("/intranet", auth(bisInternalHandler))
 	subdomains["bis"] = bisRouter
 
+	mi5Router := newRouter("mi5")
+	mi5Router.HandleFunc("/", auth(mi5IndexHandler))
+	mi5Router.HandleFunc("/intranet", auth(mi5InternalHandler))
+	subdomains["mi5"] = mi5Router
+
 	if _, err := server.getTemplates(); err != nil {
 		log.Errorf("Cannot load templates: %v", err)
 		return

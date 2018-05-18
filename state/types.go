@@ -19,6 +19,7 @@ type team struct {
 	FBI      ResultFBI
 	PPL      ResultPPL
 	BIS      ResultBIS
+	MI5      ResultMI5
 }
 
 type Result struct {
@@ -41,3 +42,4 @@ type ResultPPL struct {
 	ThirdPackage  string
 }
 type ResultBIS Result
+type ResultMI5 Result

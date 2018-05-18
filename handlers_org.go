@@ -102,7 +102,7 @@ func orgDashboardHandler(w http.ResponseWriter, r *http.Request) {
 	data := orgDashboardData{GeneralData: getGeneralData("Výsledky", r)}
 	defer func() { executeTemplate(w, "orgDashboard", data) }()
 
-	data.SecretServices = []string{"CIA", "NSA", "KGB", "FBI", "PPL", "BIS"}
+	data.SecretServices = []string{"CIA", "NSA", "KGB", "FBI", "PPL", "BIS", "MI5"}
 	data.Teams = []teamResult{}
 	for _, team := range server.state.GetTeams() {
 		res := teamResult{team.Name, []teamServiceResult{
@@ -112,6 +112,7 @@ func orgDashboardHandler(w http.ResponseWriter, r *http.Request) {
 			{team.FBI.Completed, team.FBI.CompletedTime.Format("15:04:05"), team.FBI.Tries},
 			{team.PPL.Completed, team.PPL.CompletedTime.Format("15:04:05"), team.PPL.Tries},
 			{team.BIS.Completed, team.BIS.CompletedTime.Format("15:04:05"), team.BIS.Tries},
+			{team.MI5.Completed, team.MI5.CompletedTime.Format("15:04:05"), team.MI5.Tries},
 		}}
 		data.Teams = append(data.Teams, res)
 	}
