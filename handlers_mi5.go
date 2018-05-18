@@ -36,8 +36,7 @@ func mi5IndexHandler(w http.ResponseWriter, r *http.Request) {
 		password := r.PostFormValue("password")
 		log.Infof("[MI5 - %s] Trying login '%s' and password '%s'", team.Login, login, password)
 
-		fail := true
-		if fail {
+		if login != MI5_LOGIN || password != MI5_PASSWORD {
 			data.MessageType = "danger"
 			data.Message = "Invalid credentials"
 			return

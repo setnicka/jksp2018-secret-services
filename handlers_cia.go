@@ -129,7 +129,7 @@ func ciaIndexHandler(w http.ResponseWriter, r *http.Request) {
 		}
 
 		// na tretim miste neni f
-		if password[2] != 'f' {
+		if password[2] != 'f' && password[2] != 'F' {
 			data.MessageType = "danger"
 			data.Message = "Incorrect password, there isn't the first letter of your first name on the third position in the password"
 			return
