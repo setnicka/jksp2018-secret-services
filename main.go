@@ -21,6 +21,8 @@ const (
 
 	ORG_LOGIN    = "ksp"
 	ORG_PASSWORD = "mamezakladnunamesici" // TODO: load from config file?
+
+	MI5_ASSETS_DIR = "mi5assets"
 )
 
 type Server struct {
@@ -117,6 +119,7 @@ func (s *Server) Start() {
 	mi5Router := newRouter("mi5")
 	mi5Router.HandleFunc("/", auth(mi5IndexHandler))
 	mi5Router.HandleFunc("/intranet", auth(mi5InternalHandler))
+	mi5Router.PathPrefix("/assets/").Handler(http.StripPrefix("/assets/", http.FileServer(http.Dir(MI5_ASSETS_DIR))))
 	subdomains["mi5"] = mi5Router
 
 	if _, err := server.getTemplates(); err != nil {

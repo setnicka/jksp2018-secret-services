@@ -8,8 +8,8 @@ import (
 )
 
 const (
-	MI5_LOGIN = "???"
-	MI5_PASSWORD = "???"
+	MI5_LOGIN    = "EricForbes"
+	MI5_PASSWORD = "Pass123!"
 )
 
 func mi5IndexHandler(w http.ResponseWriter, r *http.Request) {
@@ -36,7 +36,7 @@ func mi5IndexHandler(w http.ResponseWriter, r *http.Request) {
 		password := r.PostFormValue("password")
 		log.Infof("[MI5 - %s] Trying login '%s' and password '%s'", team.Login, login, password)
 
-		fail := true;
+		fail := true
 		if fail {
 			data.MessageType = "danger"
 			data.Message = "Invalid credentials"
