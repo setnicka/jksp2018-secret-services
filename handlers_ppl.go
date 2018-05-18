@@ -44,7 +44,7 @@ func pplTrackingHandler(w http.ResponseWriter, r *http.Request) {
 	team.PPL.Tries++
 
 	code := r.URL.Query().Get("zasilka_id")
-	log.Debugf("Zasilka id: %s", code);
+	log.Infof("[PPL - %s] Trying package id: %s", team.Login, code);
 
 	for i, pack := range packages {
 		if code == pack.Code {
