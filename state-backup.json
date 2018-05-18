@@ -1,0 +1,176 @@
+{
+	"Teams": [
+		{
+			"Name": "Komunisti",
+			"Login": "komunisti",
+			"Salt": "CjdEEeGZODfpRJgV",
+			"Password": "03ad22a82dbc1bf725cadd42e4bacf226c22039cc5b25c0eb4ba189d8a049724",
+			"CIA": {
+				"Completed": false,
+				"CompletedTime": "0001-01-01T00:00:00Z",
+				"Tries": 39,
+				"LastTry": "2018-05-18T18:01:05.973535354+02:00"
+			},
+			"NSA": {
+				"Completed": true,
+				"CompletedTime": "2018-05-18T17:04:57.027127935+02:00",
+				"Tries": 24
+			},
+			"KGB": {
+				"Completed": true,
+				"CompletedTime": "2018-05-18T16:07:39.107819551+02:00",
+				"Tries": 7
+			},
+			"FBI": {
+				"Completed": true,
+				"CompletedTime": "2018-05-18T17:37:11.159249017+02:00",
+				"Tries": 23
+			},
+			"PPL": {
+				"Completed": true,
+				"CompletedTime": "2018-05-18T15:31:04.348673886+02:00",
+				"Tries": 9,
+				"PackagesTracked": 4
+			},
+			"BIS": {
+				"Completed": false,
+				"CompletedTime": "0001-01-01T00:00:00Z",
+				"Tries": 27
+			},
+			"MI5": {
+				"Completed": true,
+				"CompletedTime": "2018-05-18T17:18:53.662514794+02:00",
+				"Tries": 13
+			}
+		},
+		{
+			"Name": "TLJ",
+			"Login": "tlj",
+			"Salt": "XnUPMtdwPqkzQAXO",
+			"Password": "00dc68dd852cfc29424f6c756815cba1e7c927564615e52bcb478a0b2e13405b",
+			"CIA": {
+				"Completed": false,
+				"CompletedTime": "0001-01-01T00:00:00Z",
+				"Tries": 13,
+				"LastTry": "2018-05-18T17:56:23.61716205+02:00"
+			},
+			"NSA": {
+				"Completed": false,
+				"CompletedTime": "0001-01-01T00:00:00Z",
+				"Tries": 2
+			},
+			"KGB": {
+				"Completed": true,
+				"CompletedTime": "2018-05-18T16:06:31.796978873+02:00",
+				"Tries": 7
+			},
+			"FBI": {
+				"Completed": true,
+				"CompletedTime": "2018-05-18T17:36:33.455359421+02:00",
+				"Tries": 27
+			},
+			"PPL": {
+				"Completed": true,
+				"CompletedTime": "2018-05-18T15:30:26.646433055+02:00",
+				"Tries": 9,
+				"PackagesTracked": 4
+			},
+			"BIS": {
+				"Completed": false,
+				"CompletedTime": "0001-01-01T00:00:00Z",
+				"Tries": 2
+			},
+			"MI5": {
+				"Completed": true,
+				"CompletedTime": "2018-05-18T17:09:57.851553399+02:00",
+				"Tries": 6
+			}
+		},
+		{
+			"Name": "DHL",
+			"Login": "dhl",
+			"Salt": "FGVCTHB13eNswiSS",
+			"Password": "deb8c0838256a591a04f14227267505a1310a90ff31bd473d8b59b11cfbf3cf6",
+			"CIA": {
+				"Completed": false,
+				"CompletedTime": "0001-01-01T00:00:00Z",
+				"Tries": 31,
+				"LastTry": "2018-05-18T17:54:03.752228467+02:00"
+			},
+			"NSA": {
+				"Completed": true,
+				"CompletedTime": "2018-05-18T16:46:43.008377374+02:00",
+				"Tries": 4
+			},
+			"KGB": {
+				"Completed": true,
+				"CompletedTime": "2018-05-18T15:42:43.460630306+02:00",
+				"Tries": 1
+			},
+			"FBI": {
+				"Completed": true,
+				"CompletedTime": "2018-05-18T17:31:04.574334606+02:00",
+				"Tries": 14
+			},
+			"PPL": {
+				"Completed": true,
+				"CompletedTime": "2018-05-18T15:30:39.69111583+02:00",
+				"Tries": 6,
+				"PackagesTracked": 4
+			},
+			"BIS": {
+				"Completed": false,
+				"CompletedTime": "0001-01-01T00:00:00Z",
+				"Tries": 10
+			},
+			"MI5": {
+				"Completed": true,
+				"CompletedTime": "2018-05-18T17:21:28.356659413+02:00",
+				"Tries": 9
+			}
+		},
+		{
+			"Name": "Trolové bez Marušky",
+			"Login": "trolove",
+			"Salt": "DCPORJ224_04-dDH",
+			"Password": "0aecfe622fc9876b35ed5dd85c67af598d89cd3970fbd9f48a1fcd82a9964aa8",
+			"CIA": {
+				"Completed": true,
+				"CompletedTime": "2018-05-18T17:11:25.773736036+02:00",
+				"Tries": 26,
+				"LastTry": "2018-05-18T17:11:25.773490034+02:00"
+			},
+			"NSA": {
+				"Completed": true,
+				"CompletedTime": "2018-05-18T16:58:41.952097894+02:00",
+				"Tries": 14
+			},
+			"KGB": {
+				"Completed": true,
+				"CompletedTime": "2018-05-18T16:18:09.368611559+02:00",
+				"Tries": 4
+			},
+			"FBI": {
+				"Completed": true,
+				"CompletedTime": "2018-05-18T17:06:47.463316064+02:00",
+				"Tries": 8
+			},
+			"PPL": {
+				"Completed": true,
+				"CompletedTime": "2018-05-18T15:30:13.928927955+02:00",
+				"Tries": 7,
+				"PackagesTracked": 4
+			},
+			"BIS": {
+				"Completed": true,
+				"CompletedTime": "2018-05-18T18:00:35.48822145+02:00",
+				"Tries": 2
+			},
+			"MI5": {
+				"Completed": false,
+				"CompletedTime": "0001-01-01T00:00:00Z",
+				"Tries": 15
+			}
+		}
+	]
+}
