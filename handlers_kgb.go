@@ -8,8 +8,8 @@ import (
 )
 
 const (
-	KGB_LOGIN = "igorkarkarov"
-	KGB_PASSWORD = "MarxRulles"
+	KGB_LOGIN = "AlexejIvanovic"
+	KGB_PASSWORD = "deRatyzatoR1"
 )
 
 func kgbIndexHandler(w http.ResponseWriter, r *http.Request) {
