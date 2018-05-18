@@ -17,9 +17,9 @@ type PplTrackingData struct {
 }
 
 var packages = []PplTrackingData{
-	PplTrackingData{"55604070459", "Horní Sytová", "512 41", "Marťanská kolonizační a.s.", "0,1 kg", "Balíček je v hajzlu. První patro, třetí dveře vpravo."},
-	PplTrackingData{"16145962924", "Horní Sytová", "512 41", "Elektrárna Dukovany", "9,5 kg", "Balíček je určen na podpal."},
-	PplTrackingData{"35015671123", "Horní Sytová", "512 41", "Pražský urychlovač částic", "10 tun", "TODO"},
+	PplTrackingData{"55604070459", "Horní Sytová", "512 41", "Marťanská kolonizační a.s.", "0,1 kg", "Balíček byl pohozen kolem barelu u budovy."},
+	PplTrackingData{"16145962924", "Horní Sytová", "512 41", "Elektrárna Dukovany", "9,5 kg", "Balíček byl dodán za sloup železničního mostu, jak bylo domluveno."},
+	PplTrackingData{"35015671123", "Horní Sytová", "512 41", "Pražský urychlovač částic", "10 tun", "Balíček je v hajzlu. První patro, páni, levá kabinka."},
 	PplTrackingData{"44467405130", "Horní Sytová", "512 41", "Pan F, ČP", "0,19 kg", "Balíček byl úspěšně doručen. Access Granted."},
 }
 
