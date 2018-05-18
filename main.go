@@ -137,8 +137,10 @@ func auth(handle http.HandlerFunc, renewAuth ...bool) http.HandlerFunc {
 
 	return func(w http.ResponseWriter, r *http.Request) {
 		if checkSession(w, r, renew) {
-			handle(w, r)
-			return
+			if server.state.GetTeam(getUser(r)) != nil {
+				handle(w, r)
+				return
+			}
 		}
 		http.Redirect(w, r, "/start-hry", http.StatusTemporaryRedirect)
 	}

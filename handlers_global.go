@@ -11,7 +11,7 @@ func getGeneralData(title string, r *http.Request) GeneralData {
 }
 
 func loginHandler(w http.ResponseWriter, r *http.Request) {
-	data := getGeneralData("Přihlášení do hry", r)
+	data := getGeneralData("Poštovní hackovací proxy", r)
 	defer func() {
 		executeTemplate(w, "login", data)
 	}()
