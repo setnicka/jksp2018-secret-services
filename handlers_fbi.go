@@ -8,8 +8,8 @@ import (
 )
 
 const (
-	FBI_LOGIN  = "agentjones"
-	FBI_PASSWORD = "turningitoffandonagain?"
+	FBI_LOGIN    = "agentjones"
+	FBI_PASSWORD = "restart"
 )
 
 func fbiIndexHandler(w http.ResponseWriter, r *http.Request) {
