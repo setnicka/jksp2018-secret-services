@@ -1,11 +1,32 @@
 {{ define "orgDashboard" }}
-{{ template "part_header" . }}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ .Title }}</title>
+  <link rel="stylesheet" type="text/css" href="/static/bootstrap.min.css">
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico'>
+  <meta http-equiv="refresh" content="5">
+</head>
+<body>
 <h1>Dashboard</h1>
 
 {{ template "part_messageBox" . }}
 
+<style type="text/css">
+	#dashboard td{
+		text-align: center;
+	}
+	#dashboard td {
+		opacity: 0.5;
+	}
+	#dashboard td.success {
+		border: 2px solid green;
+		opacity: 1;
+	}
+</style>
+
 <a href="/teams">Teams</a>
-<table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped" id="dashboard">
 <thead>
 	<tr><th>Tým</th>{{range .SecretServices}}<th>{{.}}</th>{{end}}</tr>
 </thead>
@@ -14,10 +35,25 @@
 	<tr>
 		<th>{{.Name}}</th>
 		{{range .Results}}
-			<td class="{{if .Completed}}success{{else if gt .Tries 0}}warning{{end}}">{{if .Completed}}{{.CompletedTime}}{{end}}<br>Pokusů: {{.Tries}}</td>
+			<td class="{{if .Completed}}success{{else if gt .Tries 0}}warning{{end}}">
+				{{if .Completed}}<b><span style="color: green; font-size: 30px;">&#10004;</span><br>{{.CompletedTime}}<br>{{end}}
+				Pokusů: {{.Tries}}
+				{{if .Completed}}</b>{{end}}
+			</td>
 		{{end}}
 	</tr>
 	{{end}}
 </tbody>
 </table>
+
+<h3>Adresy:</h3>
+<ul>
+	<li>CIA: <tt>cia.gov.ksp</tt></li>
+	<li>NSA: <tt>nsa.gov.ksp</tt></li>
+	<li>KGB: <tt>kgb.cccp</tt></li>
+	<li>FBI: <tt>fbi.gov.ksp</tt></li>
+	<li>PPL: <tt>ppl.cz.ksp</tt></li>
+	<li>BIS: <tt>bis.cz.ksp</tt></li>
+	<li>MI5: <tt>mi5.gov.uk.ksp</tt></li>
+</ul>
 {{ end }}

@@ -8,19 +8,19 @@ import (
 )
 
 type PplTrackingData struct {
-	Code string
-	City string
-	ZipCode string
+	Code     string
+	City     string
+	ZipCode  string
 	Customer string
-	Weight string
+	Weight   string
 	Location string
 }
 
 var packages = []PplTrackingData{
-	PplTrackingData{"55604070459", "Horní Sytová", "512 41", "Marťanská kolonizační a.s.", "0,1 kg", "Balíček byl pohozen kolem barelu u budovy."},
-	PplTrackingData{"16145962924", "Horní Sytová", "512 41", "Elektrárna Dukovany", "9,5 kg", "Balíček byl dodán za sloup železničního mostu, jak bylo domluveno."},
-	PplTrackingData{"35015671123", "Horní Sytová", "512 41", "Pražský urychlovač částic", "10 tun", "Balíček je v hajzlu. První patro, páni, levá kabinka."},
-	PplTrackingData{"44467405130", "Horní Sytová", "512 41", "Pan F, ČP", "0,19 kg", "Balíček byl úspěšně doručen. Access Granted."},
+	{"55604070459", "Horní Sytová", "512 41", "Marťanská kolonizační a.s.", "0,1 kg", "Balíček byl pohozen kolem barelu u budovy."},
+	{"16145962924", "Horní Sytová", "512 41", "Elektrárna Dukovany", "9,5 kg", "Balíček byl dodán za sloup železničního mostu, jak bylo domluveno."},
+	{"35015671123", "Horní Sytová", "512 41", "Pražský urychlovač částic", "10 tun", "Balíček je v hajzlu. První patro, páni, levá kabinka."},
+	{"44467405130", "Horní Sytová", "512 41", "Pan F, ČP", "0,19 kg", "Balíček byl úspěšně doručen. Access Granted."},
 }
 
 type pplTrackingPageData struct {
@@ -68,19 +68,19 @@ func pplTrackingHandler(w http.ResponseWriter, r *http.Request) {
 	team.PPL.Tries++
 
 	code := r.URL.Query().Get("zasilka_id")
-	log.Infof("[PPL - %s] Trying package id: %s", team.Login, code);
+	log.Infof("[PPL - %s] Trying package id: %s", team.Login, code)
 
 	for i, pack := range packages {
 		if code == pack.Code {
 			if team.PPL.PackagesTracked == i {
 				team.PPL.PackagesTracked = i + 1
-				log.Infof("[PPL - %s] Tracked package %i", team.Login, i + 1)
+				log.Infof("[PPL - %s] Tracked package %d", team.Login, i+1)
 			}
-			if (team.PPL.PackagesTracked >= i + 1) {
+			if team.PPL.PackagesTracked >= i+1 {
 				data.PplTrackingData = pack
 			} else {
 				data.Message = "Zásilka nebyla nalezena kvůli chybě v časoprostorovém kontinuu."
-				log.Infof("[PPL - %s] Tried to track package %d without discovering package %d", team.Login, i + 1, team.PPL.PackagesTracked + 1)
+				log.Infof("[PPL - %s] Tried to track package %d without discovering package %d", team.Login, i+1, team.PPL.PackagesTracked+1)
 			}
 		}
 	}

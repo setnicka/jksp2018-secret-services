@@ -11,7 +11,7 @@ import (
 
 const (
 	CIA_LOGIN  = "agentfred"
-	TIME_LIMIT = time.Second * 60
+	TIME_LIMIT = time.Second * 15
 )
 
 func ciaIndexHandler(w http.ResponseWriter, r *http.Request) {
@@ -35,7 +35,7 @@ func ciaIndexHandler(w http.ResponseWriter, r *http.Request) {
 
 		if time.Since(team.CIA.LastTry) < TIME_LIMIT {
 			data.MessageType = "danger"
-			data.Message = "Minimal time between two login attempts is 60 seconds"
+			data.Message = "Minimal time between two login attempts is 15 seconds"
 			return
 		}
 		defer server.state.Save()
