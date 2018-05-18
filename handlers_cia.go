@@ -35,7 +35,7 @@ func ciaIndexHandler(w http.ResponseWriter, r *http.Request) {
 
 		if time.Since(team.CIA.LastTry) < TIME_LIMIT {
 			data.MessageType = "danger"
-			data.Message = "Minimal time between two login attempts is 60 second"
+			data.Message = "Minimal time between two login attempts is 60 seconds"
 			return
 		}
 		defer server.state.Save()
@@ -82,7 +82,7 @@ func ciaIndexHandler(w http.ResponseWriter, r *http.Request) {
 
 		if other < 3 {
 			data.MessageType = "danger"
-			data.Message = "Incorrect password, there are too much letters and numbers"
+			data.Message = "Incorrect password, there are too many letters and numbers"
 			return
 		}
 		if doubleLetters > 0 {
@@ -92,12 +92,12 @@ func ciaIndexHandler(w http.ResponseWriter, r *http.Request) {
 		}
 		if smallLetters != bigLetters {
 			data.MessageType = "danger"
-			data.Message = "Incorrect password, the number of lowercase letters differs from number of uppercase letters"
+			data.Message = "Incorrect password, the number of lowercase letters differs from the number of uppercase letters"
 			return
 		}
 		if other < numbers {
 			data.MessageType = "danger"
-			data.Message = "Incorrect password, there is too much numbers"
+			data.Message = "Incorrect password, there is too many numbers"
 			return
 		}
 
@@ -121,7 +121,7 @@ func ciaIndexHandler(w http.ResponseWriter, r *http.Request) {
 				r = unicode.ToLower(r)
 				if r < lastLetter {
 					data.MessageType = "danger"
-					data.Message = "Incorrect password, letters must be in alphabet order"
+					data.Message = "Incorrect password, letters must be in alphabetical order"
 					return
 				}
 				lastLetter = r
@@ -131,7 +131,7 @@ func ciaIndexHandler(w http.ResponseWriter, r *http.Request) {
 		// na tretim miste neni f
 		if password[2] != 'f' {
 			data.MessageType = "danger"
-			data.Message = "Incorrect password, there isn't first letter of your first name on the third position in the password"
+			data.Message = "Incorrect password, there isn't the first letter of your first name on the third position in the password"
 			return
 		}
 

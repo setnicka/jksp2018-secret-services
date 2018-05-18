@@ -32,7 +32,7 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 			http.Redirect(w, r, "/", http.StatusSeeOther)
 		} else {
 			data.MessageType = "danger"
-			data.Message = "Nepsrávný login"
+			data.Message = "Nesprávný login"
 		}
 	}
 }
