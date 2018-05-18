@@ -101,7 +101,7 @@ func (s *Server) Start() {
 
 	fbiRouter := newRouter("fbi")
 	fbiRouter.HandleFunc("/", auth(fbiIndexHandler))
-	fbiRouter.HandleFunc("/intranet", auth(fbiInternalHandler))
+	fbiRouter.HandleFunc("/private", auth(fbiInternalHandler))
 	subdomains["fbi"] = fbiRouter
 
 	pplRouter := newRouter("ppl")

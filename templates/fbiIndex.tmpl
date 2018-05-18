@@ -1,14 +1,215 @@
 {{ define "fbiIndex" }}
-{{ template "part_header" . }}
+{{ template "fbiHeader" . }}
+        <header>
+            <div class="top">
+                <div class="inner">
+                    {{ if eq .MessageType "success" }}
+<!--					<p id="msg"><marquee>{{ .Message }}</marquee></p> -->
+					<big id="granted">Access Granted</big>
+					{{ else }}
+					<form method="POST">
+                        <label for="login">Sign in: </label>
+                        <!-- <div class="inps"> -->
+                        <input type="text" name="login" id="login" placeholder="login">
+                        <input type="password" name="pass" id="pass" placeholder="password">
+                        <input type="submit" name="sent" value=" Go! ">
+                        <!-- </div> -->
+                    </form>
+                    <p id="errmsg"><marquee>{{ .Message }}</marquee></p>
+					{{ end }}
+                </div>
+            </div>
+            <div class="employee">
+                <div class="inner">
+                    <img src="static/employee.jpg">
+                </div>
+            </div>
+        </header>
+        <div id="logofbi">
+            <img src="static/FBISeal_shadow.png">
+        </div>
+        <section>
+            <div class="inner">
+                <div class="main">
+                    <div class="item" style="padding-top: 90px">
+                        <h1>The best employee of the month</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, labore et dolore. Congratulations!
+                        </p>
 
-<h1>FBI</h1>
+                    </div>
+                </div>
 
-{{ template "part_messageBox" . }}
+                <div class="column">
+                    <div class="item">
+                        <h3>Most Wanted: Case of the Week</h3>
+                        <p><strong>TERRY MADISON III</strong></p>
+                        <img src="static/high.jpeg" width="100%">
+                        <p>The FBI is seeking information regarding the whereabouts of Terry Madison III. Madison is wanted by local law enforcement for allegedly carrying out three armed robberies in Mississippi and Louisiana. On April 14, 2018, Madison allegedly conducted an armed robbery of a Walmart Money Center in Hammond, Louisiana. On May…</p>
+                    </div>
+                    <div class="item">
+                        <h3>Cyber Crime</h3>
+                        <img src="static/high.png" width="100%">
+                        <p>
+                        The FBI is the lead federal agency for investigating cyber attacks by criminals, overseas adversaries, and…
+                        </p>
+                    </div>
+                    <div class="item">
+                        <h3>Wanted: KSP ranger</h3>
+                        <img src="static/hippo.png" width="100%">
+                        <p style="text-align:center"><a href="http://ksp.mff.cuni.cz"><strong>We want you for KSP!</strong></a></p>
+                    </div>
+                </div>
 
-  <form method="post">
-    <input type="text" name="login" placeholder="Secret login">
-    <input type="password" name="password" placeholder="Secret password">
-    <input type="submit" value="Login">
-  </form>
-</body>
+                <div class="main_column"><div class="item">
+
+                    <h2>Most Wanted/Missing Persons/Seeking Information</h2>
+
+                    <div class="mosaic-grid-cell mosaic-position-leftmost mosaic-width-two-thirds col-md-8">
+                <div class="movable removable mosaic-tile mosaic-fbigov.theme.listing-tile mosaic-tile-padding-bottom">
+                <div class="mosaic-tile-content">
+                <div class="castle-tile-wrapper"><div class="list-tile  sectiongrid">
+                <div class="sectiongrid">
+                <div class="row">
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 sectiongrid-item portal-type-person">
+                <a href="https://www.fbi.gov/wanted/topten">
+                <div class="focuspoint " data-scales-info="{&quot;preview&quot;: {&quot;w&quot;: 400, &quot;h&quot;: 547}, &quot;thumb&quot;: {&quot;w&quot;: 128, &quot;h&quot;: 175}, &quot;high&quot;: {&quot;w&quot;: 1400, &quot;h&quot;: 1916}, &quot;mini&quot;: {&quot;w&quot;: 200, &quot;h&quot;: 273}, &quot;large&quot;: {&quot;w&quot;: 768, &quot;h&quot;: 1051}, &quot;listing&quot;: {&quot;w&quot;: 16, &quot;h&quot;: 21}, &quot;icon&quot;: {&quot;w&quot;: 32, &quot;h&quot;: 43}, &quot;tile&quot;: {&quot;w&quot;: 64, &quot;h&quot;: 87}}" data-focus-x="0.0833333333333" data-focus-y="0.292765827922" data-h="616" data-scale="mini" data-w="450" data-base-url="https://www.fbi.gov/wanted/topten/william-bradford-bishop-jr/@@images/image/"><img src="static/mini1.jpeg" class="" alt="WILLIAM BRADFORD BISHOP, JR." style="max-height: 100% !important; top: 0px; left: -14.1026%;"></div>
+                </a>
+                <div class="title">
+                <a href="https://www.fbi.gov/wanted/topten">
+                <strong>Ten Most Wanted</strong>
+                </a>
+                <br>
+                <a href="https://www.fbi.gov/wanted/topten/william-bradford-bishop-jr">
+                <span>WILLIAM BRADFORD BISHOP, JR.</span>
+                </a>
+                </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 sectiongrid-item portal-type-person">
+                <a href="https://www.fbi.gov/wanted/wanted_terrorists">
+                <div class="focuspoint " data-scales-info="{&quot;preview&quot;: {&quot;w&quot;: 400, &quot;h&quot;: 500}, &quot;thumb&quot;: {&quot;w&quot;: 128, &quot;h&quot;: 160}, &quot;high&quot;: {&quot;w&quot;: 1400, &quot;h&quot;: 1751}, &quot;mini&quot;: {&quot;w&quot;: 200, &quot;h&quot;: 250}, &quot;large&quot;: {&quot;w&quot;: 768, &quot;h&quot;: 960}, &quot;listing&quot;: {&quot;w&quot;: 16, &quot;h&quot;: 20}, &quot;icon&quot;: {&quot;w&quot;: 32, &quot;h&quot;: 40}, &quot;tile&quot;: {&quot;w&quot;: 64, &quot;h&quot;: 80}}" data-focus-x="0.0" data-focus-y="0.00177619893428" data-h="563" data-scale="mini" data-w="450" data-base-url="https://www.fbi.gov/wanted/wanted_terrorists/daniel-andreas-san-diego/@@images/image/"><img src="static/mini2.jpeg" class="" alt="DANIEL ANDREAS SAN DIEGO" style="max-height: 100% !important; top: 0px; left: -15.3846%;"></div>
+                </a>
+                <div class="title">
+                <a href="https://www.fbi.gov/wanted/wanted_terrorists">
+                <strong>Most Wanted Terrorists</strong>
+                </a>
+                <br>
+                <a href="https://www.fbi.gov/wanted/wanted_terrorists/daniel-andreas-san-diego">
+                <span>DANIEL ANDREAS SAN DIEGO</span>
+                </a>
+                </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 sectiongrid-item portal-type-person">
+                <a href="https://www.fbi.gov/wanted/cac">
+                <div class="focuspoint " data-scales-info="{&quot;preview&quot;: {&quot;w&quot;: 400, &quot;h&quot;: 536}, &quot;thumb&quot;: {&quot;w&quot;: 128, &quot;h&quot;: 171}, &quot;high&quot;: {&quot;w&quot;: 1400, &quot;h&quot;: 1876}, &quot;mini&quot;: {&quot;w&quot;: 200, &quot;h&quot;: 268}, &quot;large&quot;: {&quot;w&quot;: 768, &quot;h&quot;: 1029}, &quot;listing&quot;: {&quot;w&quot;: 16, &quot;h&quot;: 21}, &quot;icon&quot;: {&quot;w&quot;: 32, &quot;h&quot;: 42}, &quot;tile&quot;: {&quot;w&quot;: 64, &quot;h&quot;: 85}}" data-focus-x="0.0" data-focus-y="0.0016583747927" data-h="603" data-scale="mini" data-w="450" data-base-url="https://www.fbi.gov/wanted/cac/elby-jessie-hars/@@images/image/"><img src="static/mini3.jpeg" class="" alt="ELBY JESSIE HARS" style="max-height: 100% !important; top: 0px; left: -10.8974%;"></div>
+                </a>
+                <div class="title">
+                <a href="https://www.fbi.gov/wanted/cac">
+                <strong>Crimes Against Children</strong>
+                </a>
+                <br>
+                <a href="https://www.fbi.gov/wanted/cac/elby-jessie-hars">
+                <span>ELBY JESSIE HARS</span>
+                </a>
+                </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 sectiongrid-item portal-type-person">
+                <a href="https://www.fbi.gov/wanted/additional">
+                <div class="focuspoint " data-scales-info="{&quot;preview&quot;: {&quot;w&quot;: 400, &quot;h&quot;: 804}, &quot;thumb&quot;: {&quot;w&quot;: 128, &quot;h&quot;: 257}, &quot;high&quot;: {&quot;w&quot;: 1400, &quot;h&quot;: 2816}, &quot;mini&quot;: {&quot;w&quot;: 200, &quot;h&quot;: 402}, &quot;large&quot;: {&quot;w&quot;: 768, &quot;h&quot;: 1544}, &quot;listing&quot;: {&quot;w&quot;: 16, &quot;h&quot;: 32}, &quot;icon&quot;: {&quot;w&quot;: 32, &quot;h&quot;: 64}, &quot;tile&quot;: {&quot;w&quot;: 64, &quot;h&quot;: 128}}" data-focus-x="0.201550387597" data-focus-y="-0.00439306123179" data-h="519" data-scale="mini" data-w="258" data-base-url="https://www.fbi.gov/wanted/additional/adrianna-melendez/@@images/image/"><img src="static/mini4.jpeg" class="" alt="ADRIANNA MELENDEZ" style="max-width: 100% !important; top: -12.1569%; left: 0px;"></div>
+                </a>
+                <div class="title">
+                <a href="https://www.fbi.gov/wanted/additional">
+                <strong>Additional Violent Crimes</strong>
+                </a>
+                <br>
+                <a href="https://www.fbi.gov/wanted/additional/adrianna-melendez">
+                <span>ADRIANNA MELENDEZ</span>
+                </a>
+                </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 sectiongrid-item portal-type-person">
+                <a href="https://www.fbi.gov/wanted/kidnap">
+                <div class="focuspoint " data-scales-info="{&quot;preview&quot;: {&quot;w&quot;: 400, &quot;h&quot;: 711}, &quot;thumb&quot;: {&quot;w&quot;: 128, &quot;h&quot;: 227}, &quot;high&quot;: {&quot;w&quot;: 1400, &quot;h&quot;: 2490}, &quot;mini&quot;: {&quot;w&quot;: 200, &quot;h&quot;: 355}, &quot;large&quot;: {&quot;w&quot;: 768, &quot;h&quot;: 1366}, &quot;listing&quot;: {&quot;w&quot;: 16, &quot;h&quot;: 28}, &quot;icon&quot;: {&quot;w&quot;: 32, &quot;h&quot;: 56}, &quot;tile&quot;: {&quot;w&quot;: 64, &quot;h&quot;: 113}}" data-focus-x="0.00333333333333" data-focus-y="0.171535534805" data-h="1334" data-scale="mini" data-w="750" data-base-url="https://www.fbi.gov/wanted/kidnap/jabez-spann/@@images/image/"><img src="static/mini5.jpeg" class="" alt="JABEZ SPANN" style="max-width: 100% !important; top: 0%; left: 0px;"></div>
+                </a>
+                <div class="title">
+                <a href="https://www.fbi.gov/wanted/kidnap">
+                <strong>Kidnappings &amp; Missing Persons</strong>
+                </a>
+                <br>
+                <a href="https://www.fbi.gov/wanted/kidnap/jabez-spann">
+                <span>JABEZ SPANN</span>
+                </a>
+                </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 sectiongrid-item portal-type-person">
+                <a href="https://www.fbi.gov/wanted/parental-kidnappings">
+                <div class="focuspoint " data-scales-info="{&quot;preview&quot;: {&quot;w&quot;: 400, &quot;h&quot;: 536}, &quot;thumb&quot;: {&quot;w&quot;: 128, &quot;h&quot;: 171}, &quot;high&quot;: {&quot;w&quot;: 1400, &quot;h&quot;: 1879}, &quot;mini&quot;: {&quot;w&quot;: 200, &quot;h&quot;: 268}, &quot;large&quot;: {&quot;w&quot;: 768, &quot;h&quot;: 1030}, &quot;listing&quot;: {&quot;w&quot;: 16, &quot;h&quot;: 21}, &quot;icon&quot;: {&quot;w&quot;: 32, &quot;h&quot;: 42}, &quot;tile&quot;: {&quot;w&quot;: 64, &quot;h&quot;: 85}}" data-focus-x="-0.0566666666667" data-focus-y="-0.118636175497" data-h="604" data-scale="mini" data-w="450" data-base-url="https://www.fbi.gov/wanted/parental-kidnappings/gilbert-arredondo-hernandez/@@images/image/"><img src="static/mini6.jpeg" class="" alt="GILBERT ARREDONDO HERNANDEZ" style="max-height: 100% !important; top: 0px; left: -7.05128%;"></div>
+                </a>
+                <div class="title">
+                <a href="https://www.fbi.gov/wanted/parental-kidnappings">
+                <strong>Parental Kidnappings</strong>
+                </a>
+                <br>
+                <a href="https://www.fbi.gov/wanted/parental-kidnappings/gilbert-arredondo-hernandez">
+                <span>GILBERT ARREDONDO HERNANDEZ</span>
+                </a>
+                </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 sectiongrid-item portal-type-person">
+                <a href="https://www.fbi.gov/wanted/wcc">
+                <div class="focuspoint " data-scales-info="{&quot;preview&quot;: {&quot;w&quot;: 400, &quot;h&quot;: 534}, &quot;thumb&quot;: {&quot;w&quot;: 128, &quot;h&quot;: 170}, &quot;high&quot;: {&quot;w&quot;: 1400, &quot;h&quot;: 1869}, &quot;mini&quot;: {&quot;w&quot;: 200, &quot;h&quot;: 267}, &quot;large&quot;: {&quot;w&quot;: 768, &quot;h&quot;: 1025}, &quot;listing&quot;: {&quot;w&quot;: 16, &quot;h&quot;: 21}, &quot;icon&quot;: {&quot;w&quot;: 32, &quot;h&quot;: 42}, &quot;tile&quot;: {&quot;w&quot;: 64, &quot;h&quot;: 85}}" data-focus-x="0.0" data-focus-y="0.00166389351082" data-h="601" data-scale="mini" data-w="450" data-base-url="https://www.fbi.gov/wanted/wcc/fernando-grijalva/@@images/image/"><img src="static/mini7.jpeg" class="" alt="FERNANDO GRIJALVA" style="max-height: 100% !important; top: 0px; left: -10.8974%;"></div>
+                </a>
+                <div class="title">
+                <a href="https://www.fbi.gov/wanted/wcc">
+                <strong>White Collar Crimes</strong>
+                </a>
+                <br>
+                <a href="https://www.fbi.gov/wanted/wcc/fernando-grijalva">
+                <span>FERNANDO GRIJALVA</span>
+                </a>
+                </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 sectiongrid-item portal-type-person">
+                <a href="https://www.fbi.gov/wanted/seeking-info">
+                <div class="focuspoint " data-scales-info="{&quot;preview&quot;: {&quot;w&quot;: 400, &quot;h&quot;: 320}, &quot;thumb&quot;: {&quot;w&quot;: 128, &quot;h&quot;: 102}, &quot;high&quot;: {&quot;w&quot;: 1400, &quot;h&quot;: 1120}, &quot;mini&quot;: {&quot;w&quot;: 200, &quot;h&quot;: 160}, &quot;large&quot;: {&quot;w&quot;: 767, &quot;h&quot;: 614}, &quot;listing&quot;: {&quot;w&quot;: 16, &quot;h&quot;: 12}, &quot;icon&quot;: {&quot;w&quot;: 32, &quot;h&quot;: 25}, &quot;tile&quot;: {&quot;w&quot;: 64, &quot;h&quot;: 51}}" data-focus-x="0.0" data-focus-y="-0.0" data-h="554" data-scale="mini" data-w="692" data-base-url="https://www.fbi.gov/wanted/seeking-info/unknown-bank-robbers/@@images/image/"><img src="static/mini8.jpeg" class="" alt="ARMED ROBBERS" style="max-height: 100% !important; top: 0px; left: -51.9231%;"></div>
+                </a>
+                <div class="title">
+                <a href="https://www.fbi.gov/wanted/seeking-info">
+                <strong>Seeking Information</strong>
+                </a>
+                <br>
+                <a href="https://www.fbi.gov/wanted/seeking-info/unknown-bank-robbers">
+                <span>ARMED ROBBERS</span>
+                </a>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                <div class="movable removable mosaic-tile mosaic-plone.app.standardtiles.rawhtml-tile">
+                <div class="mosaic-tile-content">
+                <p><br></p>
+                </div>
+                </div>
+                </div>
+
+                </div></div>
+
+            </div>
+        </section>
+        <hr>
+        <footer>
+            <div class="inner">
+                <p>
+                    <a href="#">Accessibility</a> | <a href="#">eRulemaking</a> | <a href="#">Freedom of Information Act</a> | <a href="#">Legal Notices</a> | <a href="#">Legal Policies and Disclaimers</a> | <a href="#">Links</a> | <a href="#">Privacy Policy</a> | <a href="#">USA.gov</a> | <a href="#">White House</a> | <a href="#">No FEAR Act</a>
+                </p><p style="text-align:center;">
+                    FBI.gov is an official site of the U.S. government, U.S. Department of Justice
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
 {{ end }}
