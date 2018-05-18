@@ -8,6 +8,12 @@
 <div id="ctl00_ContentPlaceMasterPage_ctl00_pnlData">
 		
     <div style="margin: 0px auto; text-align:justify; width:702px;">
+
+
+    <div style="{{if eq .GeneralData.Message ""}}display:none;{{else}}{{end}}" id="messageBox">
+        <h1 style="color: lime;">{{ .GeneralData.Message }}</h1>
+    </div>
+
         <input type="hidden" name="ctl00$ContentPlaceMasterPage$ctl00$ktmCustId" id="ctl00_ContentPlaceMasterPage_ctl00_ktmCustId" />
         <input type="hidden" name="ctl00$ContentPlaceMasterPage$ctl00$ktmCustDepId" id="ctl00_ContentPlaceMasterPage_ctl00_ktmCustDepId" />
         <h1> PPL Parcel CZ Private</h1>
@@ -24,8 +30,6 @@
 	            <th>Země</th>
 	            <th>Váha/kg</th>
 	            <th>Dobírka</th>
-                
-                
             </tr>
             <tr>
 	            <td><b><span id="ctl00_ContentPlaceMasterPage_ctl00_labelPackNumber">{{.PplTrackingData.Code}}</span></b></td>

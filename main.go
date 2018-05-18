@@ -108,6 +108,7 @@ func (s *Server) Start() {
 
 	pplRouter := newRouter("ppl")
 	pplRouter.HandleFunc("/", auth(pplIndexHandler))
+	pplRouter.HandleFunc("/internal", auth(pplInternalHandler))
 	pplRouter.HandleFunc("/tracking", auth(pplTrackingHandler))
 	subdomains["ppl"] = pplRouter
 
