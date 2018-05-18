@@ -54,7 +54,10 @@ func bisIndexHandler(w http.ResponseWriter, r *http.Request) {
 
 func bisInternalHandler(w http.ResponseWriter, r *http.Request) {
 	data := getGeneralData("BIS", r)
-	defer func() { executeTemplate(w, "bisInternal", data) }()
+	defer func() { executeTemplate(w, "bisIndex", data) }()
+
+	data.MessageType = "success"
+	data.Message = "Přístup povolen"
 
 	team := server.state.GetTeam(getUser(r))
 	if team == nil || !team.BIS.Completed {

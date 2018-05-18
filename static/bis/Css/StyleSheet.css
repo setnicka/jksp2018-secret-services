@@ -1,0 +1,794 @@
+﻿/* Poslední změna : 17.08.2016 */
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('/static/App_Fonts/OpenSans-Regular.ttf');
+    src: url('/static/App_Fonts/OpenSans-Regulard41d.eot?#iefix') format('embedded-opentype'), url('/static/App_Fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sans Light';
+    src: url('/static/App_Fonts/OpenSans-Light.ttf');
+    src: url('/static/App_Fonts/OpenSans-Lightd41d.eot?#iefix') format('embedded-opentype'), url('/static/App_Fonts/OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url('/static/App_Fonts/OpenSans-Light.ttf');
+    src: url('/static/App_Fonts/OpenSans-Lightd41d.eot?#iefix') format('embedded-opentype'), url('/static/App_Fonts/OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url('/static/App_Fonts/OpenSans-Bold.ttf');
+    src: url('/static/App_Fonts/OpenSans-Boldd41d.eot?#iefix') format('embedded-opentype'), url('/static/App_Fonts/OpenSans-Bold.ttf') format('truetype');
+}
+
+body {
+    font-family: 'OpenSansRegular', sans-serif;
+    background: url('/static/App_Images/bg-short.jpg') center top repeat-x #FDFDFE;
+    font-size: 0.95em;
+    min-width: 990px;
+    margin: 0;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline-width: 0;
+}
+
+a {
+    color: black;
+    cursor: pointer;
+}
+
+    a:hover {
+        color: black;
+    }
+
+    a img {
+        border: 0;
+    }
+
+#null, #preload {
+    display: none;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+.container {
+    width: 990px;
+    margin: 0 auto;
+}
+
+#logo {
+    background: url('/static/App_Images/logo.png') center center no-repeat;
+    width: 182px;
+    height: 182px;
+    margin: 15px auto 10px auto;
+    display: block;
+}
+
+#topMenu {
+    height: 45px;
+    background-color: white;
+}
+
+#navig {
+    float: left;
+}
+
+    #navig a {
+        text-decoration: none;
+        font-size: 0.85em;
+        padding-left: 12px;
+        margin-right: 8px;
+        display: inline-block;
+        background: url('/static/App_Images/li.png') left center no-repeat;
+        line-height: 42px;
+        height: 45px;
+        color: #555;
+    }
+
+        #navig a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+
+        #navig a:first-child {
+            background: none;
+            padding-left: 0;
+        }
+
+#utils {
+    float: right;
+    color: #555;
+    line-height: 42px;
+    height: 45px;
+    font-size: 0.85em;
+}
+
+    #utils a {
+        color: #555;
+        text-decoration: none;
+    }
+
+        #utils a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+
+#searchForm {
+    display: inline-block;
+    margin-left: 15px;
+    width: 410px;
+    height: 30px;
+    line-height: 30px;
+}
+
+	#searchForm button {
+		width: 120px
+	}
+    #searchForm input[type="text"], #searchForm input[type="password"] {
+        width: 120px;
+        height: 20px;
+/*        padding: 0;
+        border: 0;*/
+        padding-left: 5px;
+    }
+
+    #searchForm input[type="submit"] {
+        width: 17px;
+        border: 0;
+        font-size: 0;
+        height: 25px;
+        line-height: 35px;
+        background: url('/static/App_Images/ico-search.png') center center no-repeat;
+    }
+
+        #searchForm input[type="submit"]:hover {
+            background: url('/static/App_Images/ico-search-active.png') center center no-repeat;
+        }
+
+#topMask {
+    height: 21px;
+    background: url('/static/App_Images/flip.png') center top no-repeat;
+}
+
+#lngMenu {
+    float: right;
+}
+
+    #lngMenu a {
+        margin-left: 0px;
+        margin-right: 5px;
+        opacity: 0.7;
+        transition: 300ms;
+    }
+
+        #lngMenu .active, #lngMenu a:hover {
+            opacity: 1;
+        }
+
+        #lngMenu a span {
+            position: absolute;
+            background: url('/static/App_Images/lngs/lng-bubble.png') center center no-repeat;
+            margin: 32px 0 0 -51px;
+            width: 75px;
+            height: 24px;
+            font-size: 0.8em;
+            text-align: center;
+            line-height: 24px;
+            transition: 300ms;
+            opacity: 0;
+        }
+
+        #lngMenu a:hover span {
+            opacity: 1;
+        }
+
+#logoName {
+    font-family: OpenSansRegular;
+    font-size: 2.4em;
+    color: #336699;
+    font-weight: 100;
+    margin: 0;
+    text-align: center;
+    font-variant: small-caps;
+    height: 40px;
+    cursor: default;
+}
+
+#logoLabel {
+    font-family: OpenSansLight;
+    font-size: 1.4em;
+    color: #777;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: 400;
+    cursor: default;
+}
+
+#homeBanner {
+    height: 330px;
+    background: url('/static/App_Images/bg-blue.jpg') center center repeat-x;
+    margin-top: 25px;
+    position: relative;
+    padding-top: 15px;
+}
+
+#banners {
+    width: 990px;
+    height: 350px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: -15px;
+}
+
+.banner {
+    border: 5px solid white;
+    width: 980px !important;
+    height: 340px !important;
+    overflow: hidden;
+}
+
+#topShadow {
+    background: url('/static/App_Images/top-shadow.png') center top no-repeat;
+}
+
+#message {
+	display: inline-block;
+	margin-right: 20px;
+	font-weight: 700;
+	color: #A00;
+	border: 2px solid #A00;
+	line-height: 2;
+	padding: 0 5px;
+	border-radius: 5px;
+}
+
+#menuContainer {
+    height: 65px;
+    line-height: 51px;
+    background-color: #EEEEF4;
+    margin-top: -9px;
+    overflow: hidden;
+}
+
+#menu {
+    font-family: OpenSansLight;
+    width: 940px;
+    display: table;
+    margin: 14px auto 0 auto;
+}
+
+    #menu a {
+        display: table-cell;
+        text-align: center;
+        font-size: 1.1em;
+        font-weight: 300;
+        text-decoration: none;
+        transition: 200ms;
+        color: black;
+    }
+
+        #menu a:hover, #menu .active {
+            background-color: #FAFAFC;
+            height: 45px;
+        }
+
+h1, .slide h3, .likeh1 {
+    font-family: OpenSansLight;
+    color: #336699;
+    font-weight: 800;
+    margin: 35px auto;
+    text-align: center;
+    font-size: 1.70em;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-family: OpenSansRegular;
+    color: #000;
+    font-weight: bold;
+    margin: 35px auto;
+    margin-top: -20px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.article {
+    font-family: OpenSansLight;
+    margin-bottom: 55px;
+    cursor: default;
+}
+
+.date {
+    width: 98px;
+    height: 32px;
+    float: left;
+    line-height: 32px;
+    color: white;
+    font-size: 0.95em;
+    background: url('/static/App_Images/date.png') center left no-repeat;
+    padding-left: 10px;
+    cursor: deafult;
+}
+
+.article h2, #text h3 {
+    font-family: OpenSansRegular;
+    font-size: 1.1em;
+    color: #000;
+    line-height: 32px;
+    margin: 0 0 15px 0;
+    font-weight: 600;
+    clear: both;
+}
+
+    .article h2 a {
+        text-decoration: none;
+        color: black !important;
+    }
+
+        .article h2 a:hover {
+            text-decoration: underline;
+        }
+
+.aText {
+    font-family: OpenSansLight;
+    margin-left: 10px;
+    float: left;
+    width: 755px;
+    line-height: 170%;
+    text-align: justify;
+}
+
+#text {
+    font-weight: 300;
+    font-size: 0.95em;
+    margin-bottom: 50px;
+}
+
+    #text .btn {
+        float: right;
+    }
+
+.btn {
+    font-family: OpenSansLight;
+    background-color: #EEEEF4;
+    color: black !important;
+    font-size: 1.0em;
+    text-decoration: none;
+    padding: 5px 30px;
+    border-radius: 4px;
+    transition: 200ms;
+}
+
+    .btn:hover {
+        background-color: #ddd;
+    }
+
+.article .btn {
+    float: right;
+}
+
+.more {
+    font-family: OpenSansLight;
+    text-align: center;
+    width: 418px;
+    display: block;
+    margin: 0 auto;
+    font-size: 0.9em;
+    color: #444 !important;
+    font-weight: 300;
+    text-decoration: none;
+    background: url('/static/App_Images/line-fade-both.png') center center no-repeat;
+    transition: 200ms;
+    height: 25px;
+    line-height: 22px;
+}
+
+    .more:hover {
+        color: #777;
+        font-size: 1em;
+    }
+
+#infoBanner {
+    background-color: #EEEEF4;
+    height: 390px;
+    overflow: hidden;
+}
+
+#slides, #slides div {
+    font-family: OpenSansLight;
+    width: 720px;
+    height: 390px;
+    margin: 0 auto;
+}
+
+.slide {
+    cursor: default;
+}
+
+#carouselLeft, #carouselRight {
+    width: 40px;
+    height: 45px;
+    cursor: pointer;
+    margin-top: 180px;
+    display: block;
+    position: absolute;
+    transition: 300ms;
+}
+
+#carouselLeft {
+    background: url('/static/App_Images/move-left.png') center center no-repeat;
+    margin-left: -110px;
+}
+
+#carouselRight {
+    background: url('/static/App_Images/move-right.png') center center no-repeat;
+    margin-left: 790px;
+}
+
+#carouselLeft:hover {
+    margin-left: -118px;
+}
+
+#carouselRight:hover {
+    margin-left: 798px;
+}
+
+.slide h3 {
+    margin: 30px 0 20px 0;
+}
+
+.slideText {
+    font-family: OpenSansLight;
+    font-size: 0.95em;
+    font-weight: 300;
+    line-height: 180%;
+    height: 230px !important;
+    width: 680px !important;
+    padding-bottom: 25px;
+    overflow: hidden;
+    text-align: justify;
+}
+
+.navigCol {
+    font-family: OpenSansLight;
+    float: left;
+    width: 250px;
+    margin-left: 70px;
+    margin-right: 5px;
+    margin-top: -40px;
+    margin-bottom: 60px;
+}
+
+    .navigCol h5 {
+        font-family: OpenSansRegular;
+        background: url('/static/App_Images/line-fade.png') left bottom no-repeat;
+        height: 40px;
+        line-height: 40px;
+        padding-bottom: 10px;
+        font-weight: 300;
+        font-size: 1.2em;
+        margin: 0 0 20px 0;
+        color: #444;
+    }
+
+    .navigCol a {
+        background: url('/static/App_Images/li-bottom.png') left center no-repeat;
+        height: 36px;
+        line-height: 36px;
+        text-decoration: none;
+        font-size: 1.0em;
+        padding-left: 16px;
+        font-weight: 300;
+        transition: 200ms;
+    }
+
+        .navigCol a:hover {
+            text-decoration: underline;
+            margin-left: 4px;
+            padding-left: 12px;
+        }
+
+
+.navigCol2 {
+    background: none !important;
+    line-height: 0px;
+    height: 0px;
+}
+
+#footer {
+    background: url('/static/App_Images/footer.jpg') center bottom repeat-x;
+    height: 203px;
+    overflow: hidden;
+    cursor: default;
+}
+
+#znak {
+    margin-top: 17px;
+    margin-left: 20px;
+    float: left;
+}
+
+#footerText {
+    font-family: OpenSansLight;
+    float: left;
+    margin-left: 50px;
+    color: white;
+}
+
+    #footerText h5 {
+        font-size: 1.3em !important;
+        margin: 40px 0 0px 0;
+        text-transform: uppercase;
+    }
+
+    #footerText h6 {
+        font-size: 0.90em !important;
+        margin: 0px 0 10px 0;
+        font-weight: 300;
+    }
+
+.footerCol1, .footerCol2, .footerCol3 {
+    float: left;
+    width: 180px;
+    border-right: 1px solid white;
+    height: _ 50px;
+    line-height: 25px;
+    font-size: 1.3em;
+    font-weight: 300;
+}
+
+#footerText a {
+    color: white;
+    text-decoration: none;
+}
+
+    #footerText a:hover {
+        text-decoration: underline;
+    }
+
+.footerCol2 {
+    width: 230px;
+    margin-left: 40px;
+}
+
+.footerCol3 {
+    width: 130px;
+    margin-left: 40px;
+    border: 0;
+}
+
+#notice {
+    font-size: 0.8em;
+    margin-top: 15px;
+}
+
+.menuBlue {
+    height: 60px !important;
+    line-height: 55px !important;
+    background-color: #336699 !important;
+    margin-top: 30px !important;
+    overflow: hidden;
+}
+
+    .menuBlue #menu {
+        margin: 5px auto 0 auto !important;
+    }
+
+        .menuBlue #menu a {
+            color: white !important;
+        }
+
+            .menuBlue #menu .active, .menuBlue #menu a:hover {
+                color: black !important;
+                background-color: white;
+            }
+
+        .menuBlue #menu #home {
+            background: url('/static/App_Images/ico-home.png') center center no-repeat;
+        }
+
+        .menuBlue #menu a:first-child:hover #home {
+            background: url('/static/App_Images/ico-home-black.png') center bottom no-repeat !important;
+        }
+
+#menu #home {
+    width: 25px;
+    display: inline-block;
+    height: 25px;
+    float: left;
+    margin-left: 25px;
+    background: url('/static/App_Images/ico-home-black.png') center bottom no-repeat;
+}
+
+#text p {
+    text-align: justify;
+    margin: 0 0 25px 0;
+    line-height: 150%;
+}
+
+#text a {
+    color: #336699;
+}
+
+    #text a:hover {
+        color: #000;
+    }
+
+#submenuContainer {
+    background-color: white;
+    height: 65px;
+    line-height: 59px;
+    overflow: hidden;
+}
+
+    #submenuContainer #menu {
+        width: 990px !important;
+    }
+
+    #submenuContainer a {
+        font-size: 0.8em !important;
+        font-weight: 400;
+    }
+
+    #submenuContainer #menu {
+        margin-top: 6px;
+        height: 59px;
+    }
+
+    #submenuContainer a:hover, #submenuContainer .active {
+        background: url('/static/App_Images/submenu-bg.png') center top;
+    }
+
+#submenuContainer2 {
+    background-color: white;
+    height: 65px;
+    line-height: 59px;
+    overflow: hidden;
+}
+
+    #submenuContainer2 #menu {
+        width: 490px !important;
+    }
+
+    #submenuContainer2 a {
+        font-size: 0.8em !important;
+        font-weight: 400;
+    }
+
+    #submenuContainer2 #menu {
+        margin-top: 6px;
+        height: 59px;
+    }
+
+    #submenuContainer2 a:hover, #submenuContainer2 .active {
+        background: url('/static/App_Images/submenu-bg.png') center top;
+    }
+
+.infoBox {
+    width: 345px;
+    padding: 25px;
+    float: right;
+    margin: 0 0 30px 30px;
+    text-align: justify;
+    background-color: #eee;
+    line-height: 160%;
+}
+
+    .infoBox h3 {
+        font-size: 1.4em;
+        text-align: left;
+        line-height: 25px !important;
+        font-weight: bold;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #b3b3b3;
+        color: black;
+    }
+
+.literalText {
+}
+
+.literal {
+}
+
+ul.sitemap li.sitemap {
+    list-style-type: none;
+    background-repeat: no-repeat;
+    background-position: -2px 4px;
+    padding-left: 17px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    vertical-align: middle;
+}
+
+li.sitemap {
+    margin-left: -29px;
+}
+
+a.anchor-sitemap:link {
+    color: #008000;
+    text-decoration: none;
+}
+
+a.anchor-sitemap:hover {
+    color: #008000;
+    text-decoration: underline;
+}
+
+a.anchor-sitemap:visited {
+    color: #868BB7;
+    text-decoration: none;
+}
+
+.cd-top {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    /* image replacement properties */
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: rgba(10, 55, 102, 0.8) url(/static/App_Images/cd-top-arrow.png) no-repeat center 50%;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+    .cd-top.cd-is-visible {
+        /* the button becomes visible */
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .cd-top.cd-fade-out {
+        /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+        opacity: .5;
+    }
+
+.no-touch .cd-top:hover {
+    background-color: #e86256;
+    opacity: 1;
+}
+
+.imageFloatRight {
+    float: right;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.imageFloatLeft {
+    float: left;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+.imageBordered {
+    background-color: #FFF;
+    border: 0px solid #DDD;
+    padding: 3px;
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 70px;
+    height: 90px;
+}
+
+.success #topMenu, .success form, .success { background: black }
+.success #topMask { display: none }
+.success #menuContainer, .success #menuContainer .active { background: #222 }
+.success #homeBanner { background: #162737 }
+.success #infoBanner { background: #111 }
+
+.success { margin-top: 50px }
+#success { position: absolute; left: 0; right: 0; top: 10px; text-align: center; color: #8F8; font-size: 30px }

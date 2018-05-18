@@ -1,0 +1,43 @@
+.fl{ float: left; }
+.fr{ float: right; }
+.cleaner{ clear: both; height: 0; overflow: hidden }
+
+.f7 { font-size:  7pt !important; }
+.f8 { font-size:  8pt !important; }
+.f9 { font-size:  9pt !important; }
+.f10{ font-size: 10pt !important; }
+.f11{ font-size: 11pt !important; }
+.f12{ font-size: 12pt !important; }
+.f13{ font-size: 13pt !important; }
+.f14{ font-size: 14pt !important; }
+.f15{ font-size: 15pt !important; }
+.f16{ font-size: 16pt !important; }
+.f17{ font-size: 17pt !important; }
+.f18{ font-size: 18pt !important; }
+.f19{ font-size: 19pt !important; }
+.f20{ font-size: 20pt !important; }
+.f21{ font-size: 21pt !important; }
+.f22{ font-size: 22pt !important; }
+.f23{ font-size: 23pt !important; }
+.f24{ font-size: 24pt !important; }
+
+.bold{ font-weight: bold; }
+.normal{ font-weight: normal; }
+.nodecor{ text-decoration: none; }
+.noborder{ border: 0 !important; }
+.hand{ cursor: pointer !important; }
+.tleft{text-align: left !important; }
+.tcenter{text-align: center !important; }
+.tright{text-align: right !important; }
+.decor{text-decoration: underline !important; }
+
+.red{ color: red; }
+.gray{ color: #777777 !important; }
+.white{ color: white; }
+.black{ color: black !important; }
+
+.mcenter, .center{ margin: auto; }
+.nobg{ background: transparent !important; }
+.hidden{display: none;}
+.nocellspacing{ border-collapse: collapse; }
+.nocellpadding td, .nocellpadding th{ padding: 0; }

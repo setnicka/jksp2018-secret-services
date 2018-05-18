@@ -1,0 +1,44 @@
+html{
+      height: 100%;
+}
+
+body{
+      background: transparent;
+      background-color: white;
+}
+
+#topMenu, #lngMenu, #homeBanner, #infoBanner, #links, #footer, #logo{
+      display: none;
+}
+
+#menuContainer{
+      margin-top: 25px;
+}
+
+#footer{
+      background: transparent;
+      color: black !important;
+      border-top: 1px solid gray
+}
+
+#submenuContainer .active{
+      background: transparent;
+      font-weight: bold;
+}
+
+.menuBlue{
+      background-color: #ccc !important;
+}
+
+.menuBlue a{
+      color: black;
+}
+
+#submenuContainer{
+      border-bottom: 1px solid #ccc;
+}
+
+.infoBox{
+      border:  1px solid #ccc;
+      background: none;
+}

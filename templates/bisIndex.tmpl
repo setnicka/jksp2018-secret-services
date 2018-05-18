@@ -1,14 +1,226 @@
 {{ define "bisIndex" }}
-{{ template "part_header" . }}
+<!DOCTYPE html>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
-<h1>BIS</h1>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Bezpečnostní informační služba České republiky
+</title><link href="/static/Css/StyleSheet.css" rel="stylesheet" type="text/css" media="all" /><link href="/static/Css/general.css" rel="stylesheet" type="text/css" media="all" /><link href="/static/Css/print.css" rel="stylesheet" type="text/css" media="print" /><link rel="shortcut icon" href="/static/App_Images/favicon-16x16.ico" type="image/x-icon" /><link rel="icon" href="/static/App_Images/favicon.png" type="image/x-icon" /><meta content="/static/App_Images/favicon-128.html" />
+</head>
+<body{{ if eq .MessageType "success" }} class="success"{{ end }}>
+    <form id="form1" method="POST">
+        <div id="topShadow">
+            <div id="topMenu">
+                <div class="container">
+                    <div id="utils">
+							{{ if eq .MessageType "success" }}
+							<h2 id="success">Přístup povolen</h2>
+							{{ else }}
+							{{ if eq .Message "" }}{{ else }}<div id="message">{{ .Message }}</div>{{ end }}
+                        <div id="searchForm">
+                            <input name="login" type="text" placeholder="jméno" />
+                            <input name="password" type="password" placeholder="heslo" />
+							<button>Přihlásit se</button>
+							{{ end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- topMenu -->
+            <div class="container">
+                <div id="topMask"></div>
+                <div id="lngMenu">
+                    <a class="active">
+                        <img src="/static/App_Images/lngs/cz.png" alt="česky" /><span>česky</span></a>
+                    <a>
+                        <img src="/static/App_Images/lngs/en.png" alt="anglicky" /><span>english</span></a>
+                    <a>
+                        <img src="/static/App_Images/lngs/de.png" alt="německy" /><span>deutsch</span></a>
+                    <a>
+                        <img src="/static/App_Images/lngs/fr.png" alt="francouzsky" /><span>français</span></a>
+                </div>
+                <a id="logo" title="na úvodní stránku"></a>
+                <h4 id="logoName">Bezpečnostní Informační Služba</h4>
+                <h5 id="logoLabel">zpravodajská služba České republiky</h5>
+            </div>
+            <div id="homeBanner">
+                <div id="banners">
+                    <div class="banner">
+                        <img src="/static/App_Images/photo-1.jpg" alt="ilustrační foto 1" />
+                    </div>
+                    <div class="banner">
+                        <img src="/static/App_Images/photo-3.jpg" alt="ilustrační foto 3" />
+                    </div>
+                </div>
+            </div>
+            <div id="menuContainer">
+                <div class="container">
+                    <div id="menu">
+                        <a class="active"><span id="home"></span></a>
+                        <a>O nás</a>
+                        <a>Čím se zabýváme</a>
+                        <a>Jak pracujeme</a>
+                        <a>Výroční zprávy</a>
+                        <a>Zaměstnání</a>
+                        <a>Kontakty</a>
+                    </div>
+                </div>
+            </div>
+            <!-- menuContainer -->
+            <div>
+                
+    <div class="container">
+        
+        <h1 id="ContentPlaceHolder1_hAktualne">Aktuálně</h1>
+        <div id="text">
+            <div id="ContentPlaceHolder1_divArticle01" class="article">
+                <div id="ContentPlaceHolder1_datumAktualne01" class="date">20.04.2018</div>
+                <div class="aText">
+                    <h2><a id="ContentPlaceHolder1_aAktualne01" title="zobrazit více">Odstartoval druh&#253; ročn&#237;k studentsk&#253;ch st&#225;ž&#237; u BIS</a></h2>
+                    <table>
+                        <tr>
+                            
+                            <td style="width: 100%; vertical-align: top;">
+                                <div id="ContentPlaceHolder1_decsriptionAktualne01">Po velk&#233;m &#250;spěchu historicky prvn&#237; studentsk&#233; st&#225;že u Bezpečnostn&#237; informačn&#237; služby v loňsk&#233;m roce se letos kon&#225; dalš&#237; ročn&#237;k. Devět studentů, kteř&#237; uspěli v n&#225;ročn&#233;m v&#253;běru, se bude věnovat t&#233;matům kybernetick&#225; bezpečnost, pr&#225;vo a ochrana v&#253;znamn&#253;ch ekonomick&#253;ch z&#225;jmů. Na z&#225;věr st&#225;že jej&#237; absolventi obdrž&#237; od BIS certifik&#225;t.</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cleaner"></div>
+                <a id="ContentPlaceHolder1_hrefAktualne01" class="btn">více</a>
+            </div>
+            <!-- article -->
+            <div id="ContentPlaceHolder1_divArticle02" class="article">
+                <div id="ContentPlaceHolder1_datumAktualne02" class="date">31.01.2018</div>
+                <div class="aText">
+                    <h2><a id="ContentPlaceHolder1_aAktualne02" title="zobrazit více">Spolupr&#225;ce evropsk&#253;ch kontrarozvědek je na špičkov&#233; &#250;rovni</a></h2>
+                    <table>
+                        <tr>
+                            
+                            <td style="width: 100%; vertical-align: top;">
+                                <div id="ContentPlaceHolder1_decsriptionAktualne02">Česk&#225; televize 31. ledna 2018 v hlavn&#237; zpravodajsk&#233; relaci Ud&#225;losti odvys&#237;lala report&#225;ž o př&#237;padu z roku 2015, kdy se Bezpečnostn&#237; informačn&#237; službě podařilo dokonale zmapovat pohyb nebezpečn&#233;ho teroristy marock&#233;ho původu s francouzsk&#253;m pasem v hlavn&#237;m městě Praze.</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cleaner"></div>
+                <a id="ContentPlaceHolder1_hrefAktualne02" class="btn">více</a>
+            </div>
+            <!-- article -->
+            <div id="ContentPlaceHolder1_divArticle03" class="article">
+                <div id="ContentPlaceHolder1_datumAktualne03" class="date">11.12.2017</div>
+                <div class="aText">
+                    <h2><a id="ContentPlaceHolder1_aAktualne03" title="zobrazit více">BIS m&#225; z&#225;jem zaměstn&#225;vat handicapovan&#233;</a></h2>
+                    <table>
+                        <tr>
+                            
+                            <td style="width: 100%; vertical-align: top;">
+                                <div id="ContentPlaceHolder1_decsriptionAktualne03">Prioritou Michala Koudelky je přispět k tomu, aby byla naše země bezpečn&#253;m m&#237;stem k životu. Pracuje už čtvrt stolet&#237; v prostřed&#237; tajn&#253;ch služeb a od loňsk&#233;ho roku je nov&#253;m ředitelem Bezpečnostn&#237; informačn&#237; služby (BIS) – civiln&#237; kontrarozvědky. Ve sv&#233; funkci se mimo jin&#233; snaž&#237; z&#237;skat pro spolupr&#225;ci na ochraně n&#225;s všech tak&#233; lidi se zdravotn&#237;m handicapem.</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cleaner"></div>
+                <a id="ContentPlaceHolder1_hrefAktualne03" class="btn">více</a>
+            </div>
+            <!-- article -->
+            <br />
+            <a class="more">zobrazit starší</a>
+        </div>
+        <!-- text -->
+    </div>
+    <div id="infoBanner">
+        <div class="container">
+            <div id="slides">
+                <a id="carouselLeft" class="slidesjs-previous slidesjs-navigation" title="předchozí"></a>
+                <a id="carouselRight" class="slidesjs-next slidesjs-navigation" title="další"></a>
+                <div id="ContentPlaceHolder1_divSlide01" class="slide">
+                    <h3 id="ContentPlaceHolder1_slide01head01">Terorismus</h3>
+                    <div id="ContentPlaceHolder1_slide01description01" class="slideText">BIS byla určena jako &#250;středn&#237; zpravodajsk&#225; služba odpovědn&#225; za zpracov&#225;n&#237; vešker&#253;ch analytick&#253;ch a&#160;operativn&#237;ch informac&#237; t&#253;kaj&#237;c&#237; se bezpečnosti ČR, předevš&#237;m v souvislosti s bojem proti terorismu. V&#160;současnosti je terorismus mezin&#225;rodn&#237;m jevem, před kter&#253;m nen&#237; v bezpeč&#237; ž&#225;dn&#225; země, a proto z&#225;kladem činnosti BIS v t&#233;to oblasti je zejm&#233;na mezin&#225;rodn&#237; spolupr&#225;ce. Vlastn&#237; postup v t&#233;to problematice se ř&#237;d&#237; předevš&#237;m pragmatick&#253;m hlediskem na možn&#233; ohrožen&#237; z&#225;jmů ČR nebo na možnost &#250;toku proti objektům, občanům a z&#225;jmům jin&#233;ho st&#225;tu, kter&#253; by byl realizov&#225;n na &#250;zem&#237; ČR. V z&#225;jmu BIS jsou rovněž aktivity zaměřen&#233; na n&#225;bor či z&#237;sk&#225;v&#225;n&#237; finančn&#237; či jin&#233; logistick&#233; podpory terorismu a aktivity zaměřen&#233; na š&#237;řen&#237; radik&#225;ln&#237;ch interpretac&#237; ideologi&#237; či n&#225;boženstv&#237; podporuj&#237;c&#237;ch teroristick&#233; aktivity.</div>
+                    <a id="ContentPlaceHolder1_slide01href01" class="more">zobrazit více</a>
+                </div>
+                <div id="ContentPlaceHolder1_divSlide02" class="slide">
+                    <h3 id="ContentPlaceHolder1_slide01head02">Ochrana ekonomick&#253;ch z&#225;jmů st&#225;tu</h3>
+                    <div id="ContentPlaceHolder1_slide01description02" class="slideText">BIS informuje odpovědn&#233; představitele st&#225;tu o rizic&#237;ch směřuj&#237;c&#237;ch proti v&#253;znamn&#253;m ekonomick&#253;m z&#225;jmům Česk&#233; republiky. Smyslem je zajistit, aby adres&#225;ti informac&#237; byli včas sezn&#225;meni s riziky ohrožuj&#237;c&#237;mi z&#225;jmy st&#225;tu v jejich působnosti, a aby měli pro sv&#225; kl&#237;čov&#225; ekonomick&#225; rozhodnut&#237; všechny relevantn&#237; poznatky, např. o vnějš&#237;ch snah&#225;ch tato rozhodnut&#237; ovlivnit, o pl&#225;novan&#253;ch kroc&#237;ch rizikov&#253;ch subjektů nebo o skryt&#253;ch z&#225;jmech stoj&#237;c&#237;ch v jejich pozad&#237;.</div>
+                    <a id="ContentPlaceHolder1_slide01href02" class="more">zobrazit více</a>
+                </div>
+                <div id="ContentPlaceHolder1_divSlide03" class="slide">
+                    <h3 id="ContentPlaceHolder1_slide01head03">Kontrašpion&#225;ž</h3>
+                    <div id="ContentPlaceHolder1_slide01description03" class="slideText">&#218;kolem BIS jako kontrarozvědn&#233; zpravodajsk&#233; služby je identifikace, sledov&#225;n&#237; a sběr informac&#237; o&#160;aktivit&#225;ch ciz&#237; moci a fyzick&#253;ch či pr&#225;vnick&#253;ch osob (zejm&#233;na zpravodajsk&#253;ch služeb) jednaj&#237;c&#237;ch v z&#225;jmu ciz&#237; moci a v jej&#237; prospěch na &#250;zem&#237; Česk&#233; republiky. C&#237;lem informačn&#237; a preventivn&#237; činnosti BIS je předevš&#237;m br&#225;něn&#237; &#250;niku utajovan&#253;ch či citliv&#253;ch informac&#237; a zař&#237;zen&#237; do rukou ciz&#237; moci, zjevn&#233; či skryt&#233; narušov&#225;n&#237; činnost&#237; zpravodajsk&#253;ch služeb ciz&#237; moci, odhalov&#225;n&#237; a mařen&#237; vlivov&#253;ch operac&#237; ciz&#237; moci (dezinformace, manipulace, klam, propaganda atp.).</div>
+                    <a id="ContentPlaceHolder1_slide01href03" class="more">zobrazit více</a>
+                </div>
+                <div id="ContentPlaceHolder1_divSlide04" class="slide">
+                    <h3 id="ContentPlaceHolder1_slide01head04">Demokracie a &#250;stavnost</h3>
+                    <div id="ContentPlaceHolder1_slide01description04" class="slideText">BIS v r&#225;mci sv&#233; působnosti z&#237;sk&#225;v&#225;, shromažďuje a vyhodnocuje informace o&#160;jevech, z&#225;měrech a&#160;činnostech, kter&#233; př&#237;mo, nebo ve sv&#253;ch důsledc&#237;ch, z&#225;važn&#253;m způsobem ohrožuj&#237; &#218;stavou ČR a&#160;ostatn&#237;mi z&#225;kony dan&#233; demokratick&#233; z&#225;klady ČR, jej&#237; bezpečnost, suverenitu, &#250;zemn&#237; celistvost a&#160;lidsk&#225; a občansk&#225; pr&#225;va občanů ČR a&#160;jejich uplatňov&#225;n&#237;.</div>
+                    <a id="ContentPlaceHolder1_slide01href04" class="more">zobrazit více</a>
+                </div>
+                <div id="ContentPlaceHolder1_divSlide05" class="slide">
+                    <h3 id="ContentPlaceHolder1_slide01head05">Obchod s vojensk&#253;m materi&#225;lem a proliferace</h3>
+                    <div id="ContentPlaceHolder1_slide01description05" class="slideText">BIS v oblasti zabezpečov&#225;n&#237; informac&#237; t&#253;kaj&#237;c&#237;ch se obchodu s vojensk&#253;m materi&#225;lem a&#160;proliferace na&#160;n&#225;rodn&#237; &#250;rovni spolupracuje předevš&#237;m s&#160;Licenčn&#237; spr&#225;vou ministerstva průmyslu a&#160;obchodu, St&#225;tn&#237;m &#250;řadem pro jadernou bezpečnost, ministerstvem zahraničn&#237;ch věc&#237;, ministerstvem financ&#237; (Gener&#225;ln&#237; ředitelstv&#237; cel, Finančn&#237; analytick&#253; &#250;tvar) a&#160;ministerstvem vnitra. C&#237;lem je zamezit dod&#225;vk&#225;m již ve&#160;f&#225;zi popt&#225;vky a př&#237;pravy obchodů. V&#160;zahraničn&#237;m obchodu s&#160;vojensk&#253;m materi&#225;lem je snahou minimalizovat rizika spojen&#225; s v&#253;vozy do zem&#237;, kter&#233; neposkytuj&#237; dostatečn&#233; z&#225;ruky, že&#160;nezneužij&#237; zejm&#233;na zbraně s&#160;tzv.&#160;smrt&#237;c&#237;mi &#250;činky k&#160;nadměrn&#233;mu hromaděn&#237;, repres&#237;m či reexportům do&#160;dalš&#237;ch rizikov&#253;ch zem&#237;.</div>
+                    <a id="ContentPlaceHolder1_slide01href05" class="more">zobrazit více</a>
+                </div>
+                <div id="ContentPlaceHolder1_divSlide06" class="slide">
+                    <h3 id="ContentPlaceHolder1_slide01head06">Organizovan&#253; zločin</h3>
+                    <div id="ContentPlaceHolder1_slide01description06" class="slideText">BIS se ve sv&#233; činnosti zaměřuje zejm&#233;na na neform&#225;ln&#237; neinstitucionalizovan&#233; struktury, kter&#233; zejm&#233;na nab&#253;vaj&#237; podob vlivov&#253;ch a klientelistick&#253;ch s&#237;t&#237;. V někter&#253;ch př&#237;padech tyto s&#237;tě vytv&#225;řej&#237; paraleln&#237; mocensk&#233; struktury, jež ohrožuj&#237; či př&#237;mo podr&#253;vaj&#237; činnost org&#225;nů st&#225;tn&#237; spr&#225;vy a samospr&#225;vy. Ve&#160;v&#253;jimečn&#253;ch př&#237;padech jsou s takov&#253;mi strukturami spojeny konkr&#233;tn&#237; pr&#225;vnick&#233; osoby, kter&#233; jsou vzhledem k povaze sv&#233; činnosti často jen velmi obt&#237;žně postižiteln&#233;.</div>
+                    <a id="ContentPlaceHolder1_slide01href06" class="more">zobrazit více</a>
+                </div>
+                <div id="ContentPlaceHolder1_divSlide07" class="slide">
+                    <h3 id="ContentPlaceHolder1_slide01head07">Kybernetick&#225; bezpečnost</h3>
+                    <div id="ContentPlaceHolder1_slide01description07" class="slideText">BIS se zab&#253;v&#225; šetřen&#237;m nejrůznějš&#237;ch druhů elektronick&#253;ch &#250;toků s&#160;dopadem na chr&#225;něn&#233; z&#225;jmy ČR, a&#160;d&#225;le shromažďov&#225;n&#237;m a&#160;anal&#253;zou informac&#237; o&#160;re&#225;ln&#253;ch či&#160;potenci&#225;ln&#237;ch hrozb&#225;ch a&#160;rizic&#237;ch souvisej&#237;c&#237;ch s&#160;provozov&#225;n&#237;m strategick&#253;ch informačn&#237;ch a&#160;komunikačn&#237;ch syst&#233;mů, jejichž zničen&#237; či narušen&#237; by&#160;mohlo m&#237;t v&#225;žn&#253; dopad na bezpečnost či ekonomick&#233; z&#225;jmy ČR. Jedn&#225; se zejm&#233;na o syst&#233;my &#250;řadů a&#160;instituc&#237; veřejn&#233; spr&#225;vy či dalš&#237;ch pr&#225;vnick&#253;ch osob, včetně soukromopr&#225;vn&#237; sf&#233;ry, u&#160;kter&#253;ch se předpokl&#225;d&#225; zv&#253;šen&#225; ochrana v souvislosti s jejich v&#253;znamem či ve vazbě na jejich potenci&#225;ln&#237; zařazen&#237; mezi subjekty kritick&#233; infrastruktury ČR.</div>
+                    <a id="ContentPlaceHolder1_slide01href07" class="more">zobrazit více</a>
+                </div>
+                <div id="ContentPlaceHolder1_divSlide08" class="slide">
+                    <h3 id="ContentPlaceHolder1_slide01head08">Ochrana utajovan&#253;ch informac&#237;</h3>
+                    <div id="ContentPlaceHolder1_slide01description08" class="slideText">Formou utajen&#237; si každ&#253; st&#225;t chr&#225;n&#237; informace důležit&#233; pro jeho bezpečnost a fungov&#225;n&#237;. &#218;kolem Služby je zpravodajsky chr&#225;nit subjekty, kter&#233; s utajen&#253;mi poznatky pracuj&#237; (podle z&#225;kona o ochraně utajovan&#253;ch informac&#237; č. 412/2005 Sb.) a vyhodnocovat a označovat kl&#237;čov&#225; m&#237;sta, kde hroz&#237; potenci&#225;ln&#237; nebezpeč&#237; &#250;niku. Pokud BIS z&#237;sk&#225; varovn&#233; indicie o pokusu utajen&#237; prolomit, podnik&#225; kroky k jeho eliminaci. Zjišťuje pozad&#237; rizikov&#253;ch aktivit, stupeň ohrožen&#237;, rozsah př&#237;padn&#253;ch n&#225;sledků apod.</div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- infoBanner -->
 
-{{ template "part_messageBox" . }}
-
-  <form method="post">
-    <input type="text" name="login" placeholder="Secret login">
-    <input type="password" name="password" placeholder="Secret password">
-    <input type="submit" value="Login">
-  </form>
+            </div>
+            <div id="footer">
+                <div class="container">
+                    <div id="znak">
+                        <img src="/static/App_Images/znak.png" alt="Státní znak ČR" />
+                    </div>
+                    <div id="footerText">
+                        <h5>Bezpečnostní informační služba</h5>
+                        <h6>zpravodajská služba České republiky</h6>
+                        <div class="footerCol1">
+                            P.O. BOX 1<br />
+                            150 07 Praha 57
+                        </div>
+                        <div class="footerCol2">
+                            tel: +420 235 521 400<br />
+                            fax: +420 235 521 715
+                        </div>
+                        <div class="footerCol3">
+                            <a>info@bis.cz</a><br />
+                            <a>www.bis.cz</a>
+                        </div>
+                        <div class="cleaner"></div>
+                        <div id="notice">Tento web splňuje <a>pravidla přístupnosti</a>.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer -->
+        </div>
+        <!-- topShadow -->
+        <div id="null">
+            <a id="appOffline" style="visibility: hidden;">_app_offline.htm</a>
+            <a id="appProhlizecChyba" style="visibility: hidden;">prohlizec-chyba.htm</a>
+            <a id="appSiteMap" style="visibility: hidden;">sitemap.xml</a>
+            <a id="appRobots" style="visibility: hidden;">robots.txt</a>
+            <a id="appRss" style="visibility: hidden;">rss-feed.xml</a>
+            <a id="appRss2" style="visibility: hidden;">rss-feed.html</a>
+            <a id="appHtaccess" style="visibility: hidden;">.htaccess</a>
+            <a id="appGoogleSiteVerification" style="visibility: hidden;">googleb525cc5392a69337.html</a>
+        </div>
+    </form>
 </body>
+
+ 
+</html>
 {{ end }}
