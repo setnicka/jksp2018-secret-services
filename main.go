@@ -111,7 +111,7 @@ func (s *Server) Start() {
 
 	bisRouter := newRouter("bis")
 	bisRouter.HandleFunc("/", auth(bisIndexHandler))
-	bisRouter.HandleFunc("/intranet", auth(bisInternalHandler))
+	bisRouter.HandleFunc("/tajne", auth(bisInternalHandler))
 	subdomains["bis"] = bisRouter
 
 	mi5Router := newRouter("mi5")
