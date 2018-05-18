@@ -1,14 +1,68 @@
 {{ define "pplIndex" }}
-{{ template "part_header" . }}
+{{ template "pplHeader" . }}
+                <td valign="top">
+                    <div class="Inner">
 
-<h1>PPL</h1>
+                        <br />
+                        <div class="NovinkyBottomBg">
+                            <div class="NovinkyBottomLeftBg">
+                                <div class="NovinkyBottomRightBg">
 
-{{ template "part_messageBox" . }}
+                                    <div class="NovinkyFrm">
 
-  <form method="post">
-    <input type="text" name="login" placeholder="Secret login">
-    <input type="password" name="password" placeholder="Secret password">
-    <input type="submit" value="Login">
-  </form>
-</body>
-{{ end }}
+                                        <br />
+                                        <div id="ctl00_ContentPlaceMasterPage_wucartinc1_pnArt" class="Art" style="width:100%;text-align:justify;">
+                                            <p><span style="font-family: Arial, sans-serif; font-size: 9pt;">V&aacute;žen&iacute; z&aacute;kazn&iacute;ci,</span></p>
+                                            <p style="margin: 9pt 0cm; line-height: 11.7pt;"><span style="font-size: 9pt; font-family: Arial, sans-serif;">v&iacute;t&aacute;me V&aacute;s na webov&yacute;ch str&aacute;nk&aacute;ch společnosti PPL CZ. Jsme předn&iacute; poskytovatel&eacute; přepravn&iacute;ch služeb pro firmy a podnikatele. Na&scaron;&iacute; specializac&iacute; je bal&iacute;kov&aacute; přeprava po ČR a do Evropy, v r&aacute;mci ČR doručov&aacute;n&iacute; z&aacute;silek na soukrom&eacute; adresy a tak&eacute; vnitrost&aacute;tn&iacute; paletov&aacute; přeprava.</span></p>
+                                            <p><span style="font-size: 9pt; font-family: Arial, sans-serif;">V&aacute;&scaron; t&yacute;m PPL</span><span style="font-family: Arial, sans-serif; font-size: 9pt;">&nbsp;</span></p>
+                                            <p>&nbsp;</p>
+                                            <p><span style="font-size: 9pt;"><span style="font-family: arial,helvetica,sans-serif;">V&aacute;žen&iacute; z&aacute;kazn&iacute;ci,<br /><br />ve čtvrtek 17. 05. 2018 od 21:00 dojde k mimoř&aacute;dn&eacute; &uacute;držbě syst&eacute;mů PPL, kter&aacute; může trvat přibližně 5 hodin.&nbsp; Z tohoto důvodu mohou webov&eacute; aplikace a weby PPL vykazovat zn&aacute;mky nestability. Jedn&aacute; se zejm&eacute;na o weby www.ppl.cz, klient.ppl.cz, www.pplbalik.cz nebo vyhled&aacute;v&aacute;n&iacute; z&aacute;silek. <br />Za př&iacute;padn&eacute; komplikace se omlouv&aacute;me. <br /></span></span>
+                                            </p>
+                                            <p><span style="font-size: 9pt;"><span style="font-family: arial,helvetica,sans-serif;">V&aacute;&scaron; t&yacute;m PPL</span></span>
+                                            </p>
+                                        </div>
+
+                                        <br />
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </td>
+                <td valign="top">
+                    <div class="Right">
+                        <div class="banner">
+
+                        </div>
+                        <div class="banner"><img width="215" Height="108" src="static/image/poslatBalik_cz.jpg" /></div>
+                        <div style="clear:both;"></div>
+
+                        <div class="quickMenu">
+							<img src="/static/image/zakaznicka_zona_cs.gif" />
+                        </div>
+
+                        <div class="quickMenu"><img src="static/image/novyZakaznikSmall_cz.png"/></div>
+                        <div class="quickMenu">
+
+						<img src="static/image/spravneZabBalik_cs.gif" />
+
+                        </div>
+                        <div class="quickMenu"><img src="static/image/kalkulackaPPLSprint_cs.gif" /></div>
+                        <div style="clear:both;"></div>
+
+						<span id="parcelshopCounterContainer">
+							<div id="ctl00_ContentPlaceMasterPage_wucParcelshopCounter_parcelshopCounter" class="parcelshopCounter">1473</div>
+							<div class="text">Aktuální počet Parcelshopů</div>
+						</span>
+
+                        <div style="clear:both;"></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+
+{{ template "pplFooter" . }}
+{{end}}

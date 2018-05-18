@@ -1,0 +1,114 @@
+{{ define "pplTracking" }}
+{{ template "pplHeader" . }}
+<td valign="top">
+                
+                <div class="Inner2">
+                    <br />
+                    <div id="ctl00_ContentPlaceMasterPage_pnMain">
+<div id="ctl00_ContentPlaceMasterPage_ctl00_pnlData">
+		
+    <div style="margin: 0px auto; text-align:justify; width:702px;">
+        <input type="hidden" name="ctl00$ContentPlaceMasterPage$ctl00$ktmCustId" id="ctl00_ContentPlaceMasterPage_ctl00_ktmCustId" />
+        <input type="hidden" name="ctl00$ContentPlaceMasterPage$ctl00$ktmCustDepId" id="ctl00_ContentPlaceMasterPage_ctl00_ktmCustDepId" />
+        <h1> PPL Parcel CZ Private</h1>
+        <br />
+        <table class="frm2" style="width:100%;">
+            <caption>Informace o zásilce </caption>
+            <tr>
+	            <th>Číslo zásilky</th>
+	            <th>Placeno kartou</th>
+	            <th>Odesílatel</th>
+	            <th>Zákaznická reference</th>
+	            <th>PSČ</th>
+	            <th>Město</th>
+	            <th>Země</th>
+	            <th>Váha/kg</th>
+	            <th>Dobírka</th>
+                
+                
+            </tr>
+            <tr>
+	            <td><b><span id="ctl00_ContentPlaceMasterPage_ctl00_labelPackNumber">{{.PplTrackingData.Code}}</span></b></td>
+	            <td><span disabled="disabled"><input id="ctl00_ContentPlaceMasterPage_ctl00_chbPayByCard" type="checkbox" name="ctl00_payByCard" disabled="disabled" /></span></td>
+	            <td><span id="ctl00_ContentPlaceMasterPage_ctl00_labelCustName">{{.PplTrackingData.Customer}}</span></td>
+	            <td><span id="ctl00_ContentPlaceMasterPage_ctl00_labelCustRef"></span></td>
+	            <td><span id="ctl00_ContentPlaceMasterPage_ctl00_labelRecepientZipCode">{{.PplTrackingData.ZipCode}}</span></td>
+	            <td><span id="ctl00_ContentPlaceMasterPage_ctl00_labelRecepientCity">{{.PplTrackingData.City}}</span></td>
+	            <td><span id="ctl00_ContentPlaceMasterPage_ctl00_labelRecepientCountry">CZ</span></td>
+	            <td><span id="ctl00_ContentPlaceMasterPage_ctl00_labelWeight">{{.PplTrackingData.Weight}}</span></td>
+	            <td><span id="ctl00_ContentPlaceMasterPage_ctl00_labelCodPrice"></span></td>  
+                
+                
+            </tr>
+        </table>
+
+            <h3>NOVINKA! Nechte si svou zásilku doručit na PPL ParcelShop ve Vašem městě! Zásilku si můžete vyzvednout kdykoli v otevíracích hodinách provozovny.</h3>
+    
+        <br/>
+        <table>
+            <tr>
+                <td><h2>Aktuální stav Vaší zásilky k datu:</h2></td>
+                <td style="width:50px;"></td>
+                <td><h2>18.5.2018 12:00</h2></td>
+            </tr>
+        </table>
+        <br />
+        
+        <table class="pikStatusFrm" >
+            <tr>
+                <td><img src="static/image/Prevzeti.jpg" id="ctl00_ContentPlaceMasterPage_ctl00_imagePrevzeti" /></td>
+                <td class="separator"></td>
+                <td><img src="static/image/SvozoveDepo.jpg" id="ctl00_ContentPlaceMasterPage_ctl00_imageSvozDepo" /></td>
+                <td class="separator"></td>
+                <td><img src="static/image/Centrala.jpg" id="ctl00_ContentPlaceMasterPage_ctl00_imageCentrala" /></td>
+                <td class="separator"></td>
+                <td><img src="static/image/DorucovaciDepo.jpg" id="ctl00_ContentPlaceMasterPage_ctl00_imageDorucovaciDepo" /></td>
+                <td class="separator"></td>
+                <td><img src="static/image/PredaniHover.jpg" id="ctl00_ContentPlaceMasterPage_ctl00_imagePredani" class="done" /></td>
+            </tr>
+        </table>
+
+        <div style="border: 2px solid #043883; padding: 8px;">
+            <b>{{.PplTrackingData.Location}}</b>
+                   
+            
+        </div>
+
+
+        <!--HOD DORUCENI-->
+        
+
+        <!--ParcelShop info-->
+        <div style="padding-top: 20px">
+            <table cellpadding="3px">
+                <tr style="vertical-align: top;">
+                    <td style="vertical-align: top; width: 27%;">
+                        <div id="descAddress">
+                        </div>
+                    </td>
+                    <td style="vertical-align: top; width: 33%; padding-left: 10px; padding-right: 5px;">
+                        <div id="descOpen">
+                        </div>
+                    </td>
+                    <td style="vertical-align: top; width: 40%; border-left: 1px solid #E6E6E6; padding-left: 10px;">
+                        <div id="descPosition">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+		<br />
+        <div style="clear:both;"></div>
+
+    </div>
+
+	</div>
+
+
+</div>
+                </div>
+            </td>
+        </tr>
+    </table>
+{{ template "pplFooter" . }}
+{{end}}

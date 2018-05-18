@@ -1,0 +1,170 @@
+{{ define "pplHeader" }}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="ctl00_Head1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link href="static/ppl.css" rel="stylesheet" />
+    <title>PPL s.r.o.</title>
+</head>
+
+<body>
+    <div id="WebContainer">
+        <!-- ***** HEADER ***** -->
+        <div id="Header">
+            <div class="Inner">
+                <div class="logoDHL">
+                    <img src="/static/image/logoDHL.gif"  alt="Logo DHL" />
+                </div>
+                <div class="logoPPL">
+                    <a href="/"><img src="/static/image/logoPPL.gif"  alt="Logo PPL" /></a>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div style="width:700px;  border:0px solid black; color:White; position:absolute; top:15px; left:26px;">
+
+                    <div style="clear:both;"></div>
+
+                    <div style="clear:both;"></div>
+                </div>
+
+                <div class="findArray">
+                    <div class="find">
+                    </div>
+
+                    <div class="find">
+						<form method="GET" id="form" action="/tracking">
+                        <table class="clear" align="right">
+                            <tr>
+                                <td valign="middle">SLEDOVÁNÍ ZÁSILKY</td>
+                                <td valign="middle">
+                                    <input id="zasilka_id" name="zasilka_id" placeholder="číslo zásilky" type="text" /></td>
+                                <td valign="middle">
+								<input type="submit" value="OK" class="buttonOk" />
+								</td>
+                            </tr>
+                        </table>
+						</form>
+                    </div>
+                    <div style="clear:both;"></div>
+                </div>
+            </div>
+
+            <div class="Bottom">
+            </div>
+
+
+        </div>
+        <!-- ***** HEADER end ***** -->
+        <!-- ***** CONTENT ***** -->
+        <table id="Content" class="clear" border="0">
+            <tr>
+                <td class="LeftTd" valign="top">
+                    <div class="Left">
+
+                        <table class="MenuPart2Left" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td class="normal" nowrap>
+                                    novinky
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="normal" nowrap>
+                                    o nás
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="normal" nowrap>
+                                    kde nás najdete
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="normal" nowrap>
+                                    naše služby a ceníky
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="normal" nowrap>
+                                    příplatky
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="normal" nowrap>
+                                    PPL Parcelshop
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="normal" nowrap>
+                                    poslat balík
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="normal" nowrap>
+                                    elektronická fakturace
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="normal" nowrap>
+                                    reklamace
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="normal" nowrap>
+                                    ke stažení
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="normal" nowrap>
+                                    nabídka zaměstnání
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="normal" nowrap>
+                                    spolupráce s dopravci
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="normal" nowrap>
+                                    zákaznický servis
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="normal" nowrap>
+                                    ochrana soukromí & cookies
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="normal" nowrap>
+                                    osobní údaje
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div class="NovinkySmall">
+                            <div class="line1Gray"></div>
+                            <br />
+
+                            <div>
+							<p>Pro měs&iacute;c&nbsp;květen&nbsp;2018&nbsp;je palivov&yacute; př&iacute;platek&nbsp;7 %.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </td>
+{{ end }}

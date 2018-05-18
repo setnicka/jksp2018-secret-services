@@ -37,9 +37,7 @@ type ResultKGB Result
 type ResultFBI Result
 type ResultPPL struct {
 	Result
-	FirstPackage  string
-	SecondPackage string
-	ThirdPackage  string
+	PackagesTracked int
 }
 type ResultBIS Result
 type ResultMI5 Result
