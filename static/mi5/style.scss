@@ -1,0 +1,103 @@
+$font_size : 18pt;
+$small_font_size : 14pt;
+
+html, body {
+	min-height: 100%
+}
+
+body {
+	background: #F5F6F7 url('/static/emblem.png');
+	background-position: 18% center;
+	background-repeat: no-repeat;
+	background-size: 26%;
+	background-attachment: fixed;
+	color: #333;
+	font: 18pt "Droid Sans";
+	line-height: 1.25;
+	@media (max-width: 800px) {
+		font-size: $small_font_size
+	}
+}
+
+footer {
+	background: #005e80;
+	position: absolute;
+	bottom: 0;
+	top: 90%;
+	left: 0; right: 0;
+	z-index: -1000
+}
+
+input[type="submit"] {
+	font-size: $font_size
+}
+
+abbr[title] { border: 0 }
+
+#logo {
+	width: 30%;
+	max-width: 25em;
+	display: block;
+	margin: 1em auto 0 auto
+}
+
+#content {
+	padding: 1em;
+	padding-top: .3em;
+	max-width: 40em;
+	position: absolute;
+		top: 25%;
+		left: 50%;
+		right: 0;
+}
+
+/*h1 { font-size: 300% }
+h2 { font-size: 250% }
+h3 { font-size: 200% } */
+
+h1, h2, h3, h4, h5, h6 { margin: .3em 0; font-weight: bold }
+
+h1 { margin-top: 0 }
+
+h2 { margin-bottom: 1em }
+
+form {
+	display: inline-block;
+	padding: 1em;
+//	background: #838997;
+	background: linear-gradient(#CCCEE0,#C5C7E9);
+	border: 1px solid #AAACAF;
+	border-top: .7em solid #005E80;
+	label {
+		display: inline-block;
+		min-width: 7em
+	}
+
+	input[type=submit] {
+		display: inline-block;
+		margin-top: .5em
+	}
+
+	input { margin-bottom: .2em }
+
+	h2 {
+		margin: 0 0 .5em 0
+	}
+}
+
+.alert {
+	background: none;
+	border: none;
+	margin: .2em 0;
+	padding: 0;
+	font-weight: bold
+}
+
+#granted {
+	margin-top: 1em;
+	text-align: center;
+	display: block;
+	font-size: 400%;
+	font-variant: small-caps;
+	color: #5F5
+}

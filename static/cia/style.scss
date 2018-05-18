@@ -1,0 +1,96 @@
+$font_size : 18pt;
+$small_font_size : 14pt;
+
+html, body {
+	min-height: 100%
+}
+
+body {
+	background: black url('/static/background.png');
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 80%;
+	background-attachment: fixed;
+	color: #EEE;
+	font: 18pt Helvetica, Arial;
+	line-height: 1.25;
+	@media (max-width: 800px) {
+		font-size: $small_font_size
+	}
+}
+
+input[type="submit"] {
+	font-size: $font_size
+}
+
+input {
+	background: black;
+	border: 2px solid white;
+	border-radius: 2px;
+	padding: .2em .3em
+}
+
+abbr[title] { border: 0 }
+
+#logo {
+	width: 30%;
+	max-width: 15em;
+	display: block;
+	margin: 0 auto
+}
+
+#content {
+	margin: auto;
+	margin-top: 10%;
+	padding: 1em;
+	padding-top: .3em;
+	max-width: 40em;
+	position: absolute;
+		top: 25%;
+		left: 0;
+		right: 0
+}
+
+/*h1 { font-size: 300% }
+h2 { font-size: 250% }
+h3 { font-size: 200% } */
+
+h1, h2, h3, h4, h5, h6 { margin: .3em 0; font-weight: bold }
+
+h1 { font-variant: small-caps; margin-top: 0 }
+h1, h2 { text-align: center }
+
+h2 { margin-bottom: 1em }
+
+form {
+	margin: 1em auto 0 auto;
+	label {
+		display: inline-block;
+		min-width: 7em
+	}
+
+	button {
+		display: inline-block;
+		margin-top: .5em
+	}
+}
+
+$alert_color : #800;
+
+.alert-danger {
+	background: black;
+	color: $alert_color;
+	border-color: $alert_color;
+	button {
+		display: none
+	}
+}
+
+#granted {
+	margin-top: 1em;
+	text-align: center;
+	display: block;
+	font-size: 400%;
+	font-variant: small-caps;
+	color: #5F5
+}
